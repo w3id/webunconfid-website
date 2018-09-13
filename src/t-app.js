@@ -38,9 +38,17 @@ export class TApp extends TintComponent {
                 transition-duration: 0.2s;
                 z-index:1000;
             }
+            #drawer ul{
+                    list-style:none;
+                }
+
             #drawer.active{
                 left:0;
                 border-right: 1px solid #CCC;
+            }
+
+            #drawer ul li{
+                line-height:4rem;
             }
             #nav-toggle{
                 position: absolute;
@@ -93,13 +101,13 @@ export class TApp extends TintComponent {
                 text-align:center;
                 margin:0 auto;
                 width:80%;
-                top:10%;
-                font-size:1.4em;
+                top:20%;
+                font-size:1.2em;
             }
             #featured-image .venue{
                 font-size:0.8em;
             }
-            header,#menu{
+            header{
                 margin:16px;
             }
 
@@ -165,9 +173,39 @@ export class TApp extends TintComponent {
             @media (min-width: 40.0rem) { 
                 
                 #drawer{
-                    width:30vw;
-                    left:-30vw;
+                    width:70vw;
+                    right:2rem;
+                    top:1rem;
+                    left:30vw;
+                    height:3rem;
+                    background:transparent;
                 }
+
+                #drawer.active{
+                    left:30vw;
+                    border-right: none;
+                }
+                
+                #drawer ul{
+                    display:flex;
+                    flex-direction:row;
+                    justify-content:flex-end;
+                    margin:0;
+                }
+
+                #drawer ul li{
+                    padding:1rem 2rem 1rem 4rem;
+                    text-align:right;
+                    line-height:2rem;
+                }
+                #drawer ul li a{
+                    color:#FFF;
+                }
+                #drawer header,#nav-close,#nav-toggle{
+                    display:none;
+                }
+                
+                
                 #community-list, #sponsor-list,#venue{
                     flex-direction:row;
                 }
