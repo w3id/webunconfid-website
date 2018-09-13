@@ -239,7 +239,7 @@ export class TApp extends TintComponent {
                             <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue')}>Lokasi</a></li>
                             <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community-list')}>Komunitas</a></li>
                             <li><a href="#organizer" @click=${(e) => this.scrollTo(e,'#organizer-list')}>Organizer</a></li>
-                            <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participant-list')}>Participant</a></li>
+                            <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participants-list')}>Participant</a></li>
                         </ul>
                 </div>
                 <div id="content-container">
@@ -306,7 +306,7 @@ export class TApp extends TintComponent {
                                 <t-organizers id="organizer-list"></t-organizers>
                             </div>
                             <div class="block-content">
-                                <t-participants id="participant-list"></t-participants>
+                                <t-participants id="participants-list"></t-participants>
                             </div>
                             <div class="block-content">
                                 <h2>Sponsor</h2>

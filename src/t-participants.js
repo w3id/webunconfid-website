@@ -55,7 +55,7 @@ export default class TParticipants extends HTMLElement{
         }
             </style>
             <h2>Yang Akan Hadir</h2>
-            <div>
+            <div id="participant-list">
             ${html`
                 ${until(
                     fetch('participants.json')
