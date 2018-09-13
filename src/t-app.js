@@ -16,7 +16,9 @@ export class TApp extends TintComponent {
             margin:0;
             padding:0;
         }
-        
+            a{
+                text-decoration:none;
+            }
             article{
                 line-height: 1.6em;
                 margin: 0 16px;
@@ -91,7 +93,7 @@ export class TApp extends TintComponent {
                 text-align:center;
                 margin:0 auto;
                 width:80%;
-                top:30%;
+                top:10%;
                 font-size:1.4em;
             }
             #featured-image .venue{
@@ -273,6 +275,10 @@ export class TApp extends TintComponent {
                                     <t-img class="sponsor" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img>
                                     <t-img class="sponsor" src="img/logo/sirclo.png" size="contain" position="center"></t-img>
                                 </div>
+                            </div>
+                            <div id="footer" class="block-content">
+                                <p>Develop by <a href="//github.com/tyohan">@tyohan</a>,<a href="//github.com/ri7nz">@ri7nz</a> and <a href="//github.com/satyakresna">@satyakresna</a>. Available in our <a href="//github.com/w3id/webunconfid-website">Github</a>.</p>
+                                <p>Join our <a href="https://t.me/wwwid_pwa">group discussion</a> and read our <a href="https://medium.com/wwwid">publication</a></p>
                             </div>
                         </div>
                         

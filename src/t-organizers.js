@@ -34,15 +34,17 @@ export default class TOrganizers extends HTMLElement{
                 .organizer h3{
                     margin-top:0;
                 }
-                .organizer .desc{
-                    height:18rem;
-                }
+                
             
                 /* Larger than mobile screen */
                 @media (min-width: 40.0rem) { 
                     #organizer-list{
                         flex-direction:row;
                         justify-content:space-between;
+                    }
+
+                    .organizer .desc{
+                        height:18rem;
                     }
                 }
             </style>
