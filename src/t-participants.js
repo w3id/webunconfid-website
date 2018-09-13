@@ -55,7 +55,7 @@ export default class TParticipants extends HTMLElement{
         }
             </style>
             <h2>Yang Akan Hadir</h2>
-            <div id="participant-list">
+            <div>
             ${html`
                 ${until(
                     fetch('participants.json')
@@ -67,7 +67,8 @@ export default class TParticipants extends HTMLElement{
                             participant => this.participantCard({
                                 name: participant.name,
                                 community: participant.community,
-                                topic: participant.topic
+                                topic: participant.topic,
+                                photo: participant.photo
                             })
                         )}`;
                     }),
@@ -83,7 +84,7 @@ export default class TParticipants extends HTMLElement{
             .replace(/\n/g,',');
         return html`
             <div class="participant">
-            <t-img src=${photo ? photo : "../img/user-solid.svg"}></t-img>
+            <t-img src=${photo}></t-img>
             <h3>${name}</h3>
             <div class="community">${community}</div>
             <div class="topic">Interested In Topic</div>
