@@ -85,8 +85,9 @@ export default class TParticipants extends HTMLElement{
             <div class="participant">
             <t-img src=${photo ? photo : "../img/user-solid.svg"}></t-img>
             <h3>${name}</h3>
-            <div class="community"><strong>${community}</strong></div>
-            <div class="desc">Topik: ${topic}</div>
+            <div class="community">${community}</div>
+            <div class="topic">Interested In Topic</div>
+            <div class="desc">${topic}</div>
             </div> 
             `;
     }
