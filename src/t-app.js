@@ -304,9 +304,9 @@ export class TApp extends TintComponent {
                             <div class="block-content">
                                 <t-organizers id="organizer-list"></t-organizers>
                             </div>
-                            <!-- <div class="block-content">
+                            <div class="block-content">
                                 <t-participants></t-participants>
-                            </div> -->
+                            </div>
                             <div class="block-content">
                                 <h2>Sponsor</h2>
                                 <div id="sponsor-list">
