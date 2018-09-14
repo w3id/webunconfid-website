@@ -243,9 +243,9 @@ export class TApp extends TintComponent {
 
         </style>
         <div id="container">
-                <a id="nav-toggle" href="#" @click=${(e) => this._shadowRoot.querySelector('#drawer').classList.toggle('active')}>&#9776;</a>
+                <a id="nav-toggle" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&#9776;</a>
                 <div id="drawer">
-                        <a id="nav-close" href="#" @click=${(e) => this._shadowRoot.querySelector('#drawer').classList.toggle('active')}>&times;</a>
+                        <a id="nav-close" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&times;</a>
                         <header>
                                 <h2>Menu</h2>
                         </header>
