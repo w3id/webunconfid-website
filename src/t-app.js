@@ -37,7 +37,7 @@ export class TApp extends TintComponent {
                 height: 100vh;
                 left:-70vw;
                 top:0;
-                position: absolute;
+                position: fixed;
                 background: #FFF;
                 transition-duration: 0.2s;
                 z-index:1000;
@@ -56,14 +56,22 @@ export class TApp extends TintComponent {
                 line-height:4rem;
             }
             #nav-toggle{
-                position: absolute;
-                left: 2rem;
+                position: fixed;
+                left: 1rem;
                 top:1rem;
                 font-size: 3rem;
                 text-decoration: none;
                 color: #FFF;
                 z-index:100;
                 vertical-align:top;
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                border-radius: 100%;
+                background-color: #000;
+                -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
             }
             #nav-close{
                 position: absolute;
@@ -115,7 +123,7 @@ export class TApp extends TintComponent {
 
            .block-content{
                margin:0 auto 8rem auto;
-               padding:0 2rem;
+               padding:1px 2rem;
                max-width:960px;
            }
 
@@ -194,6 +202,7 @@ export class TApp extends TintComponent {
                     left:30vw;
                     height:3rem;
                     background:transparent;
+                    position: absolute;
                 }
 
                 #drawer.active{
@@ -252,7 +261,7 @@ export class TApp extends TintComponent {
                         <ul id="menu">
                             <li><a href="#tentang" @click=${(e) => this.scrollTo(e,'#tentang')}>Tentang</a></li>
                             <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue')}>Lokasi</a></li>
-                            <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community-list')}>Komunitas</a></li>
+                            <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community')}>Komunitas</a></li>
                             <li><a href="#organizer" @click=${(e) => this.scrollTo(e,'#organizer-list')}>Organizer</a></li>
                             <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participants-list')}>Participant</a></li>
                         </ul>
@@ -280,9 +289,9 @@ export class TApp extends TintComponent {
                                 <p>Bootcamp ini diperuntukkan untuk kalian yang aktif di komunitas pengembang web Indonesia sehingga kita bisa saling mengenal satu sama lain dan bersama-sama berdiskusi untuk membuat para pengembang web di Indonesia bisa membuat web yang lebih baik.</p>
                                 </article>
                             </div>
-                            <div class="block-content">
+                            <div class="block-content" id="venue">
                                 <h2>Lokasi</h2>
-                                <div id="venue">
+                                <div>
                                     <t-img src="img/ethes-facade.jpg"></t-img>
                                     <article>
                                         <h4>Ethes Coworking &amp; Coliving Space</h4>
@@ -292,7 +301,7 @@ export class TApp extends TintComponent {
                                     </article>
                                 </div>
                             </div>
-                            <div class="block-content">
+                            <div class="block-content" id="community">
                                 <h2>Komunitas Yang Hadir</h2>
                                 <div>
                                     <ul id="community-list">
@@ -317,15 +326,15 @@ export class TApp extends TintComponent {
                                     </ul>
                                 </div>
                             </div>
-                            <div class="block-content">
-                                <t-organizers id="organizer-list"></t-organizers>
+                            <div class="block-content" id="organizer-list">
+                                <t-organizers></t-organizers>
                             </div>
-                            <div class="block-content">
-                                <t-participants id="participants-list"></t-participants>
+                            <div class="block-content" id="participants-list">
+                                <t-participants></t-participants>
                             </div>
-                            <div class="block-content">
+                            <div class="block-content" id="sponsor-list">
                                 <h2>Sponsor</h2>
-                                <div id="sponsor-list">
+                                <div>
                                     <t-img class="sponsor" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img>
                                     <t-img class="sponsor" src="img/logo/sirclo.png" size="contain" position="center"></t-img>
                                 </div>
@@ -343,7 +352,8 @@ export class TApp extends TintComponent {
     scrollTo(e,selector){
         this._shadowRoot.querySelector('#drawer').classList.toggle('active');
         this._shadowRoot.querySelector(selector).scrollIntoView({ 
-            behavior: 'smooth' 
+            behavior: 'smooth',
+            block: 'start'
           });
         e.preventDefault();
     }
