@@ -72,7 +72,7 @@ export default class TParticipants extends HTMLElement{
                             })
                         )}`;
                     }),
-                    html`<span> Menunggu Para Participant...</span>`
+                    html`<span> Menunggu Para Partisipan...</span>`
                 )}`}
             </div>
             `;

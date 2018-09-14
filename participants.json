@@ -29,13 +29,6 @@
       "photo": "img/photo/Fachruzi_Ramadhan.jpg"
     },
     {
-      "name": "Windi Triyani",
-      "community": "FemaleGeek",
-      "profile": "Saya Front-end Developer di 8Villages Indonesia.",
-      "topic": "",
-      "photo": "img/photo/Windi_Triyani.jpg"
-    },
-    {
       "name": "Prillyandini Nurul Hidayah",
       "community": "Femalegeek",
       "profile": "Saya adalah seorang Backend Developer di sebuah Startup di Bandung. Mulai aktif di dunia Programming sejak akhir tahun lalu bersama teman-teman Femalegeek. ",
@@ -300,6 +293,27 @@
       "profile": "Salam kenal, namaku Mila. Aku punya passion di front end web dan mobile, kebetulan sekarang bekerja sebagai iOS developer di GO-JEK. Di luar GO-JEK aku kebetulan juga founder dan web developer untuk Generation Girl, organisasi yang mempunyai misi untuk menginspirasi anak-anak muda perempuan Indonesia untuk menggeluti industri tehnik. ",
       "topic": "Building a non -profit organization from scratch, utilizing bootstrap to increase product development, women in tech.",
       "photo": "img/photo/Vania_Radmila_Alfitri.jpg"
-    }
+    },
+    {
+      "name": "Adiatma Kamarudin",
+      "community": "ReactID",
+      "profile": "Javascript Enthusiast, and father for my son",
+      "topic": "javascript, react, react-native mobile, and web development",
+      "photo": "img/photo/Adiatma_Kamarudin.jpg"
+    },
+    {
+      "name": "Dendi Sunardi",
+      "community": "WWWID",
+      "profile": "Mobile Web Specialist, working on Tokopedia Lite, a lite mobile version of Tokopedia. Implementing Progressive Web App and Accelerated Mobile Page.",
+      "topic": "Mobile Web and Ecommerce",
+      "photo": "img/photo/Dendi_Sunardi.jpg"
+    },
+    {
+      "name": "Nedya Amrih Prakasa",
+      "community": "WWWID",
+      "profile": "Software Engineer Mobile Web di Tokopedia",
+      "topic": "web application security, web application peformance, new technology in web development",
+      "photo": "img/photo/Nedya_Amrih_Prakasa.jpg"
+    } 
   ]
 }
