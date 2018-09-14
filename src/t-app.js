@@ -81,6 +81,10 @@ export class TApp extends TintComponent {
                 margin-bottom:5rem;
                 color:#FFF;
                 position:relative;
+
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             #arrow-down{
                 display: hidden;
@@ -99,7 +103,7 @@ export class TApp extends TintComponent {
                 text-align:center;
                 margin:0 auto;
                 width:80%;
-                top:20%;
+                // top:20%;
                 font-size:1.2em;
             }
             #featured-image .venue{
@@ -116,9 +120,10 @@ export class TApp extends TintComponent {
            }
 
             #content-container{
-                text-align:center;
-                
+                text-align:center; 
             }
+
+                
             #venue{
                 display:flex;
                 flex-direction:column;
@@ -166,6 +171,8 @@ export class TApp extends TintComponent {
                 list-style-type:none;
                 margin-bottom:1em;
             }
+
+            
 
             /* Larger than mobile screen */
             @media (min-width: 40.0rem) { 
