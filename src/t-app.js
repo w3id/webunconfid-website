@@ -177,7 +177,7 @@ export class TApp extends TintComponent {
                     bottom:0;
                     position:absolute;
                     left:50%;
-                    margin-left:-3rem;
+                    transform: translateX(-50%);
                 }    
 
                 #drawer{
