@@ -11,23 +11,27 @@ export class TApp extends TintComponent {
     getTemplate(){
         return html`
         <style>
-        :host{
-            display:block;
-            margin:0;
-            padding:0;
-        }
+            :host{
+                display:block;
+                margin:0;
+                padding:0;
+            }
+
             a{
                 text-decoration:none;
             }
+
             article{
                 line-height: 1.6em;
                 margin: 0 16px;
             }
+
             #container{
                 position: relative;
                 height: 100vh;
                 width: 100vw;
             }
+
             #drawer{
                 width:70vw;
                 height: 100vh;
@@ -38,9 +42,10 @@ export class TApp extends TintComponent {
                 transition-duration: 0.2s;
                 z-index:1000;
             }
+
             #drawer ul{
-                    list-style:none;
-                }
+                list-style:none;
+            }
 
             #drawer.active{
                 left:0;
@@ -78,14 +83,7 @@ export class TApp extends TintComponent {
                 position:relative;
             }
             #arrow-down{
-                font-size: 8rem;
-                text-decoration: none;
-                color: #F0F0F0;
-                z-index:100;
-                bottom:0;
-                position:absolute;
-                left:50%;
-                margin-left:-3rem;
+                display: hidden;
             }
             #featured-image .dark-bg{
                 position:absolute;
@@ -171,7 +169,17 @@ export class TApp extends TintComponent {
 
             /* Larger than mobile screen */
             @media (min-width: 40.0rem) { 
-                
+                #arrow-down {
+                    font-size: 8rem;
+                    text-decoration: none;
+                    color: #F0F0F0;
+                    z-index:100;
+                    bottom:0;
+                    position:absolute;
+                    left:50%;
+                    margin-left:-3rem;
+                }    
+
                 #drawer{
                     width:70vw;
                     right:2rem;
@@ -239,6 +247,7 @@ export class TApp extends TintComponent {
                             <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue')}>Lokasi</a></li>
                             <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community-list')}>Komunitas</a></li>
                             <li><a href="#organizer" @click=${(e) => this.scrollTo(e,'#organizer-list')}>Organizer</a></li>
+                            <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participants-list')}>Participant</a></li>
                         </ul>
                 </div>
                 <div id="content-container">
@@ -304,9 +313,9 @@ export class TApp extends TintComponent {
                             <div class="block-content">
                                 <t-organizers id="organizer-list"></t-organizers>
                             </div>
-                            <!-- <div class="block-content">
-                                <t-participants></t-participants>
-                            </div> -->
+                            <div class="block-content">
+                                <t-participants id="participants-list"></t-participants>
+                            </div>
                             <div class="block-content">
                                 <h2>Sponsor</h2>
                                 <div id="sponsor-list">
