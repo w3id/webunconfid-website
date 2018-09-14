@@ -83,7 +83,7 @@ export class TApp extends TintComponent {
                 position:relative;
             }
             #arrow-down{
-                display: hidden;
+                display: none;
             }
             #featured-image .dark-bg{
                 position:absolute;
