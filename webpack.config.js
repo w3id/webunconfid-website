@@ -4,6 +4,9 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+
+const { InjectManifest } = require('workbox-webpack-plugin');
+
 module.exports = {
   entry: './src/t-app.js',
   output: {
@@ -33,6 +36,9 @@ module.exports = {
   },
   plugins: [
     new CopyWebpackPlugin([ 'img/*','img/logo/*','index.html' ]),
-    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i })
+    new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
+    new InjectManifest({
+      swSrc: './src/service-worker.js'
+    })
   ]
 };
