@@ -12,6 +12,7 @@
     "@babel/polyfill": "^7.0.0",
     "lit-html": "^0.11.0",
     "milligram": "^1.3.0",
+    "register-service-worker": "^1.5.2",
     "tint-web-component": "0.0.4"
   },
   "devDependencies": {
