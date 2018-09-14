@@ -1,9 +1,28 @@
-# Website for WebUnconfID
+# Website untuk WebunconfID
 
-### Apa itu WebUnconfID?
-Bootcamp Untuk Aktivis Komunitas Pengembang Web Indonesia. Indonesia adalah negara besar dengan pertumbuhan industri startup yang sangat cepat. Tapi pertumbuhan ini tidak dibarengi dengan pertumbuhan suplai talenta. Bahkan lulusan universitas belum memenuhi kebutuhan standar industri. Karena itu komunitas di sini memainkan peran yang sangat penting untuk mengembangkan talenta kita dan menyiapkan mereka untuk siap dengan standar industri.
+Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-Html](https://github.com/Polymer/lit-html) dan [TintJS](https://github.com/tyohan/tint-web-component).
 
-Bootcamp ini diperuntukkan untuk kalian yang aktif di komunitas pengembang web Indonesia sehingga kita bisa saling mengenal satu sama lain dan bersama-sama berdiskusi untuk membuat para pengembang web di Indonesia bisa membuat web yang lebih baik.
+## Live
 
-### Ingin berkontribusi?
-Fork repositori ini dan silakan buat Pull Request.
+[https://webunconfid.wwwid.org/](https://webunconfid.wwwid.org/)
+
+## Cara menjalankan website
+
+1. Pastikan sudah clone repository atau mengunduh repository ini.
+1. Menuju ke root project ```webunconfid-website``` via terminal.
+1. Untuk mengunduh depedencies yang diperlukan, jalankan ```npm install``` atau ```yarn``` atau ```yarn install```.
+1. Untuk menjalankan website di browser, Anda bisa menggunakan [**Open With Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) yang ada di VS Code atau menggunakan [**serve**](https://www.npmjs.com/package/serve) dan jalankan ```serve``` di root project.
+
+## Berkontribusi
+
+Terdapat tiga jalan bagi Anda jika berkontribusi melalui Github:
+1. Memberikan star ⭐️ pada repository ini.
+1. Mengirimkan [issue](https://github.com/w3id/webunconfid-website/issues).
+2. Mengirimkan pull request. <br />
+   Jika Anda mengirimkan pull request, pastikan Anda tidak melakukan update pada branch master 
+   agar memudahkan maintainer project dan tidak mengganggu jalannya repository yang sedang dikerjakan.
+   Nb: *Kebijakan ini kembali kepada maintainer project*
+
+--------
+
+Copyright © 2018 by WWWID
