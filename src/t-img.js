@@ -4,11 +4,12 @@ export default class TImg extends HTMLElement {
         this.src='';
         this.size='cover';
         this.position='top';
+        this.rounded=false;
         this._shadowRoot=this.attachShadow({mode: 'open'});
         this._shadowRoot.innerHTML=this.template;
 	}
   
-	static get observedAttributes() { return ['src','size','position']; }
+	static get observedAttributes() { return ['src','size','position','rounded']; }
   
 	attributeChangedCallback(name, oldValue, newValue) {
 		switch(name){
@@ -20,6 +21,9 @@ export default class TImg extends HTMLElement {
                 break;
             case 'position':
                 this.position = newValue;
+                break;
+            case 'rounded':
+                this.rounded = newValue === null ? false : true;
                 break;
 		}
 		this.render();
@@ -38,6 +42,7 @@ export default class TImg extends HTMLElement {
                 bottom:0;
                 left:0;
                 right:0;
+                border-radius:${this.rounded ? '100%' : '0'};
                 background:transparent url(${this.src}) no-repeat;
                 background-size:${this.size};
                 background-position:${this.position};
