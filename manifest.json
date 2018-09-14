@@ -1,0 +1,10 @@
+{
+    "name": "WebUnconfID 2018",
+    "short_name": "WebUnconfID",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "scope": "/",
+    "start_url": "/"
+  }
