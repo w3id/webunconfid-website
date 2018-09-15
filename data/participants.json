@@ -314,6 +314,13 @@
       "profile": "Software Engineer Mobile Web di Tokopedia",
       "topic": "web application security, web application peformance, new technology in web development",
       "photo": "img/photo/Nedya_Amrih_Prakasa.jpg"
-    } 
+    },
+    {
+      "name": "Mirza Chilman Garin",
+      "community": "SemarangJs",
+      "profile": "Freelancer Full-Stack developer",
+      "topic": "Just an engineer whose trying to be a cool engineer",
+      "photo": "img/photo/Mirza_Chilman.jpg"
+    }
   ]
 }
