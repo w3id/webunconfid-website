@@ -95,7 +95,7 @@ export class TApp extends TintComponent {
                 justify-content: center;
             }
             #arrow-down{
-                display: hidden;
+                display: none;
             }
             #featured-image .dark-bg{
                 position:absolute;
@@ -192,7 +192,7 @@ export class TApp extends TintComponent {
                     bottom:0;
                     position:absolute;
                     left:50%;
-                    margin-left:-3rem;
+                    transform: translateX(-50%);
                 }    
 
                 #drawer{
@@ -260,8 +260,8 @@ export class TApp extends TintComponent {
                         </header>
                         <ul id="menu">
                             <li><a href="#tentang" @click=${(e) => this.scrollTo(e,'#tentang')}>Tentang</a></li>
-                            <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue')}>Lokasi</a></li>
-                            <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community')}>Komunitas</a></li>
+                            <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue-content')}>Lokasi</a></li>
+                            <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community-content')}>Komunitas</a></li>
                             <li><a href="#organizer" @click=${(e) => this.scrollTo(e,'#organizer-list')}>Organizer</a></li>
                             <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participants-list')}>Participant</a></li>
                         </ul>
@@ -289,7 +289,7 @@ export class TApp extends TintComponent {
                                 <p>Bootcamp ini diperuntukkan untuk kalian yang aktif di komunitas pengembang web Indonesia sehingga kita bisa saling mengenal satu sama lain dan bersama-sama berdiskusi untuk membuat para pengembang web di Indonesia bisa membuat web yang lebih baik.</p>
                                 </article>
                             </div>
-                            <div class="block-content" id="venue">
+                            <div id="venue-content" class="block-content">
                                 <h2>Lokasi</h2>
                                 <div>
                                     <t-img src="img/ethes-facade.jpg"></t-img>
@@ -301,6 +301,7 @@ export class TApp extends TintComponent {
                                     </article>
                                 </div>
                             </div>
+                            <div id="community-content" class="block-content">
                             <div class="block-content" id="community">
                                 <h2>Komunitas Yang Hadir</h2>
                                 <div>
@@ -354,7 +355,7 @@ export class TApp extends TintComponent {
         this._shadowRoot.querySelector(selector).scrollIntoView({ 
             behavior: 'smooth',
             block: 'start'
-          });
+        });
         e.preventDefault();
     }
 }
