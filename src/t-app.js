@@ -3,6 +3,7 @@ import {render,html} from '../node_modules/lit-html/lit-html.js';
 import TImg from './t-img.js';
 import TOrganizers from './t-organizers.js';
 import TParticipants from './t-participants.js';
+import './registerServiceWorker';
 export class TApp extends TintComponent {    
     render(){
         render(this.getTemplate(),this._shadowRoot);
