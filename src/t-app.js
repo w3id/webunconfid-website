@@ -1,48 +1,50 @@
 import TintComponent from '../node_modules/tint-web-component/src/tint-component.js';
-import {render,html} from '../node_modules/lit-html/lit-html.js'; 
+import { render, html } from '../node_modules/lit-html/lit-html.js';
 import TImg from './t-img.js';
 import TOrganizers from './t-organizers.js';
 import TParticipants from './t-participants.js';
-import { register } from '../node_modules/register-service-worker/index.js'
+import { register } from '../node_modules/register-service-worker/index.js';
 
 customElements.define('t-img', TImg);
 customElements.define('t-organizers', TOrganizers);
 customElements.define('t-participants', TParticipants);
 
-export class TApp extends TintComponent {    
-    render(){
-        render(this.getTemplate(),this._shadowRoot);
-    }
+export class TApp extends TintComponent {
+  render() {
+    render(this.getTemplate(), this._shadowRoot);
+  }
 
-    ready(){
-        register('/service-worker.js', {
-            ready (registration) {
-            console.log('Service worker is active.')
-            },
-            registered (registration) {
-            console.log('Service worker has been registered.')
-            },
-            cached (registration) {
-            console.log('Content has been cached for offline use.')
-            },
-            updatefound (registration) {
-            console.log('New content is downloading.')
-            },
-            updated (registration) {
-            console.log('New content is available; please refresh.')
-            },
-            offline () {
-            console.log('No internet connection found. App is running in offline mode.')
-            },
-            error (error) {
-            console.error('Error during service worker registration:', error)
-            }
-        });
-        super.ready();
-    }
+  ready() {
+    register('/service-worker.js', {
+      ready(registration) {
+        console.log('Service worker is active.');
+      },
+      registered(registration) {
+        console.log('Service worker has been registered.');
+      },
+      cached(registration) {
+        console.log('Content has been cached for offline use.');
+      },
+      updatefound(registration) {
+        console.log('New content is downloading.');
+      },
+      updated(registration) {
+        console.log('New content is available; please refresh.');
+      },
+      offline() {
+        console.log(
+          'No internet connection found. App is running in offline mode.'
+        );
+      },
+      error(error) {
+        console.error('Error during service worker registration:', error);
+      },
+    });
+    super.ready();
+  }
 
-    getTemplate(){
-        return html`
+  getTemplate() {
+    return html`
         <style>
             :host{
                 display:block;
@@ -289,24 +291,52 @@ export class TApp extends TintComponent {
 
         </style>
         <div id="container">
-                <a id="nav-toggle" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&#9776;</a>
+                <a id="nav-toggle" href="#" @click=${e => {
+                  e.preventDefault();
+                  this._shadowRoot
+                    .querySelector('#drawer')
+                    .classList.toggle('active');
+                }}>&#9776;</a>
                 <div id="drawer">
-                        <a id="nav-close" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&times;</a>
+                        <a id="nav-close" href="#" @click=${e => {
+                          e.preventDefault();
+                          this._shadowRoot
+                            .querySelector('#drawer')
+                            .classList.toggle('active');
+                        }}>&times;</a>
                         <header>
                                 <h2>Menu</h2>
                         </header>
                         <ul id="menu">
-                            <li><a href="#tentang" @click=${(e) => this.scrollTo(e,'#tentang')}>Tentang</a></li>
-                            <li><a href="#venue" @click=${(e) => this.scrollTo(e,'#venue-content')}>Lokasi</a></li>
-                            <li><a href="#komunitas" @click=${(e) => this.scrollTo(e,'#community-content')}>Komunitas</a></li>
-                            <li><a href="#organizer" @click=${(e) => this.scrollTo(e,'#organizer-list')}>Organizer</a></li>
-                            <li><a href="#participant" @click=${(e) => this.scrollTo(e,'#participants-list')}>Participant</a></li>
+                            <li><a href="#tentang" @click=${e =>
+                              this.scrollTo(e, '#tentang')}>Tentang</a></li>
+                            <li><a href="#venue" @click=${e =>
+                              this.scrollTo(
+                                e,
+                                '#venue-content'
+                              )}>Lokasi</a></li>
+                            <li><a href="#komunitas" @click=${e =>
+                              this.scrollTo(
+                                e,
+                                '#community-content'
+                              )}>Komunitas</a></li>
+                            <li><a href="#organizer" @click=${e =>
+                              this.scrollTo(
+                                e,
+                                '#organizer-list'
+                              )}>Organizer</a></li>
+                            <li><a href="#participant" @click=${e =>
+                              this.scrollTo(
+                                e,
+                                '#participants-list'
+                              )}>Participant</a></li>
                         </ul>
                 </div>
                 <div id="content-container">
                         <div id="featured-image">
                             <div class="dark-bg"></div>
-                            <a id="arrow-down" href="#main-content" @click=${(e) => this.scrollTo(e,'#tentang')}>&#8964;</a>
+                            <a id="arrow-down" href="#main-content" @click=${e =>
+                              this.scrollTo(e, '#tentang')}>&#8964;</a>
                             <div class="content">
                                 <h1>WebUnconfID</h1>
                                 <h4>Web Community Leaders Bootcamp</h4>
@@ -386,14 +416,14 @@ export class TApp extends TintComponent {
                 </div>
         </div>
         `;
-    }
-    scrollTo(e,selector){
-        this._shadowRoot.querySelector('#drawer').classList.toggle('active');
-        this._shadowRoot.querySelector(selector).scrollIntoView({ 
-            behavior: 'smooth',
-            block: 'start'
-        });
-        e.preventDefault();
-    }
+  }
+  scrollTo(e, selector) {
+    this._shadowRoot.querySelector('#drawer').classList.toggle('active');
+    this._shadowRoot.querySelector(selector).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+    e.preventDefault();
+  }
 }
-customElements.define('t-app',TApp);
+customElements.define('t-app', TApp);
