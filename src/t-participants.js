@@ -59,7 +59,7 @@ export default class TParticipants extends HTMLElement{
             <div id="participant-list">
             ${html`
                 ${until(
-                    fetch('participants.json')
+                    fetch('data/participants.json')
                     .then(res => res.json())
                     .then(participants => {
                         return html`
