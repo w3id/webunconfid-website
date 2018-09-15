@@ -4,7 +4,7 @@ export default class TImg extends HTMLElement {
         this.src='';
         this.size='cover';
         this.position='top';
-        this.roundedImage=false;
+        this.rounded=false;
         this._shadowRoot=this.attachShadow({mode: 'open'});
         this._shadowRoot.innerHTML=this.template;
 	}
@@ -23,7 +23,7 @@ export default class TImg extends HTMLElement {
                 this.position = newValue;
                 break;
             case 'rounded':
-                this.roundedImage = newValue === null ? false : true;
+                this.rounded = newValue === null ? false : true;
                 break;
 		}
 		this.render();
@@ -42,7 +42,7 @@ export default class TImg extends HTMLElement {
                 bottom:0;
                 left:0;
                 right:0;
-                border-radius: ${this.roundedImage ? '100%' : '0'};
+                border-radius:${this.rounded ? '100%' : '0'};
                 background:transparent url(${this.src}) no-repeat;
                 background-size:${this.size};
                 background-position:${this.position};

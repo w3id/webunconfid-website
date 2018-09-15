@@ -334,9 +334,9 @@ export class TApp extends TintComponent {
                             </div>
                             <div class="block-content" id="sponsor-list">
                                 <h2>Sponsor</h2>
-                                <div>
-                                    <t-img class="sponsor" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img>
-                                    <t-img class="sponsor" src="img/logo/sirclo.png" size="contain" position="center"></t-img>
+                                <div id="sponsor-list">
+                                    <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
+                                    <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
                                 </div>
                             </div>
                             <div id="footer" class="block-content">
