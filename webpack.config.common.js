@@ -38,7 +38,7 @@ module.exports = {
       ]
     },
     plugins: [
-      new CopyWebpackPlugin([ 'img/*','img/logo/*','img/favicon/*','img/photo/*','index.html','manifest.json','favicon.ico','node_modules/milligram/dist/*','data/participants.json' ]),
+      new CopyWebpackPlugin([ 'img/*','img/logo/*','img/favicon/*','img/photo/*','index.html','manifest.json','favicon.ico','node_modules/milligram/dist/*','data/*.json' ]),
       new InjectManifest({
         swSrc: './src/service-worker.js',
         importWorkboxFrom:'local'
