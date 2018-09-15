@@ -53,7 +53,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CopyWebpackPlugin([ 'img/*/*','data/*','node_modules/milligram/dist/*.css','index.html' ]),
+    new CopyWebpackPlugin([ 'img/*/*','data/*','node_modules/milligram/dist/*','index.html' ]),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
     new InjectManifest({
       swSrc: './src/service-worker.js'
