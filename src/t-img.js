@@ -1,6 +1,6 @@
 export default class TImg extends HTMLElement {
 	constructor() {
-		super();
+        super();
         this.src='';
         this.size='cover';
         this.position='top';
