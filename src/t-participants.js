@@ -35,7 +35,7 @@ export default class TParticipants extends HTMLElement{
                 margin:2rem auto;
             }
             .participant h3{
-                margin-top:0;
+                margin:0;
             }
            
             .participant .community{ 
@@ -43,7 +43,8 @@ export default class TParticipants extends HTMLElement{
             }
 
             .participant .desc{
-                height:18rem;
+                max-height:18rem;
+                margin-bottom: 3rem;
             }
 
         /* Larger than mobile screen */
@@ -84,7 +85,7 @@ export default class TParticipants extends HTMLElement{
             .replace(/\n/g,',');
         return html`
             <div class="participant">
-            <t-img src=${photo}></t-img>
+            <t-img src=${photo} rounded></t-img>
             <h3>${name}</h3>
             <div class="community">${community}</div>
             <div class="topic">Interested In Topic</div>
