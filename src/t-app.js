@@ -3,10 +3,42 @@ import {render,html} from '../node_modules/lit-html/lit-html.js';
 import TImg from './t-img.js';
 import TOrganizers from './t-organizers.js';
 import TParticipants from './t-participants.js';
-import './registerServiceWorker';
+import { register } from '../node_modules/register-service-worker/index.js'
+
+customElements.define('t-img', TImg);
+customElements.define('t-organizers', TOrganizers);
+customElements.define('t-participants', TParticipants);
+
 export class TApp extends TintComponent {    
     render(){
         render(this.getTemplate(),this._shadowRoot);
+    }
+
+    ready(){
+        register('/service-worker.js', {
+            ready (registration) {
+            console.log('Service worker is active.')
+            },
+            registered (registration) {
+            console.log('Service worker has been registered.')
+            },
+            cached (registration) {
+            console.log('Content has been cached for offline use.')
+            },
+            updatefound (registration) {
+            console.log('New content is downloading.')
+            },
+            updated (registration) {
+            console.log('New content is available; please refresh.')
+            },
+            offline () {
+            console.log('No internet connection found. App is running in offline mode.')
+            },
+            error (error) {
+            console.error('Error during service worker registration:', error)
+            }
+        });
+        super.ready();
     }
 
     getTemplate(){
@@ -127,23 +159,27 @@ export class TApp extends TintComponent {
                padding:1px 2rem;
                max-width:960px;
            }
+           
+           .block-content h2{
+               width:100%;
+           }
 
             #content-container{
                 text-align:center; 
             }
 
                 
-            #venue{
+            #venue-content{
                 display:flex;
                 flex-direction:column;
                 justify-content:center;
                 align-content:left;
             }
-            #venue > * {
+            #venue-content > * {
                 flex-grow:1;
             }
 
-            #venue t-img{
+            #venue-content t-img{
                 height:300px;
             }
 

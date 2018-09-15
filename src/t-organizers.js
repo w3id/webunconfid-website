@@ -104,4 +104,3 @@ export default class TOrganizers extends HTMLElement{
         });
 	}
 }
-customElements.define('t-organizers',TOrganizers);

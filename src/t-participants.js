@@ -104,4 +104,3 @@ export default class TParticipants extends HTMLElement{
         });
     }
 }
-customElements.define('t-participants',TParticipants);

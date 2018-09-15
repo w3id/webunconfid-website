@@ -70,5 +70,3 @@ export default class TImg extends HTMLElement {
 	}
 	
 }
-
-customElements.define('t-img', TImg);

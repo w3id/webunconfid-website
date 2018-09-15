@@ -1,18 +1,13 @@
-const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin'); 
 const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-const { InjectManifest } = require('workbox-webpack-plugin');
 
-module.exports = {
-  entry: './src/t-app.js',
-  output: {
-    filename: 'src/t-app.js',
-    path: path.resolve(__dirname, 'dist')
-  },
-  mode: "production",
+const merge = require('webpack-merge');
+const common = require('./webpack.config.common.js');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
+
+module.exports = merge(common, {
+  mode: 'production',
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
@@ -23,40 +18,8 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({})
     ]
   },
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, 'src')
-    },
-    extensions: ['*', '.js', '.json']
-  },
-  module: {
-    rules: [
-      {
-        test: /\.css$/,
-        use: [
-          'style-loader',
-          'css-loader'
-        ]
-      },
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac|woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url-loader',
-        options: {
-          limit: 10000
-        }
-      }
-    ]
-  },
-  plugins: [
-    new CopyWebpackPlugin([ 'img/*','img/logo/*','index.html' ]),
+  plugins:[
+    new CleanWebpackPlugin(['dist/*']),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
-    new InjectManifest({
-      swSrc: './src/service-worker.js'
-    })
   ]
-};
+});
