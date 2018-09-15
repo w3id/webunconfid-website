@@ -4,7 +4,6 @@ const UglifyJsPlugin = require("uglifyjs-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
-
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = {
@@ -13,6 +12,7 @@ module.exports = {
     filename: 'src/t-app.js',
     path: path.resolve(__dirname, 'dist')
   },
+  mode: "production",
   optimization: {
     minimizer: [
       new UglifyJsPlugin({
@@ -23,6 +23,12 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({})
     ]
   },
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src')
+    },
+    extensions: ['*', '.js', '.json']
+  },
   module: {
     rules: [
       {
@@ -31,6 +37,18 @@ module.exports = {
           'style-loader',
           'css-loader'
         ]
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.(png|jpe?g|gif|svg|mp4|webm|ogg|mp3|wav|flac|aac|woff2?|eot|ttf|otf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 10000
+        }
       }
     ]
   },
