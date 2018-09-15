@@ -328,7 +328,7 @@ export class TApp extends TintComponent {
                             </div>
                             <div id="venue-content" class="block-content">
                                 <h2>Lokasi</h2>
-                                <div>
+                                <div id="venue">
                                     <t-img src="img/ethes-facade.jpg"></t-img>
                                     <article>
                                         <h4>Ethes Coworking &amp; Coliving Space</h4>
@@ -370,11 +370,11 @@ export class TApp extends TintComponent {
                             <div class="block-content" id="participants-list">
                                 <t-participants></t-participants>
                             </div>
-                            <div class="block-content" id="sponsor-list">
+                            <div class="block-content">
                                 <h2>Sponsor</h2>
                                 <div id="sponsor-list">
-                                    <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
-                                    <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
+                                    <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
+                                    <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Line ke Sirclo.com" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
                                 </div>
                             </div>
                             <div id="footer" class="block-content">
