@@ -89,6 +89,7 @@ export class TApp extends TintComponent {
 
             #drawer ul li{
                 line-height:4rem;
+                margin-right:25px;
             }
             #nav-toggle{
                 position: fixed;
