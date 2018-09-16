@@ -314,6 +314,41 @@
       "profile": "Software Engineer Mobile Web di Tokopedia",
       "topic": "web application security, web application peformance, new technology in web development",
       "photo": "img/photo/Nedya_Amrih_Prakasa.jpg"
-    } 
+    },
+    {
+      "name": "Todi Adiyatmo Wijoyo",
+      "community": "WordPress Yogyakarta",
+      "profile": "Kami adalah kelompok pengguna WordPress di Yogyakarta, yang ter-organisir dalam Yogyakarta WordPress Meetup. Tujuan kami adalah mempopulerkan penggunaan WordPress kepada orang awam dan meningkatkan skill developer WordPress untuk pengguna yang lebih advanced",
+      "topic": "Seputar Web Development dan WordPress",
+      "photo": "img/photo/Todi_Adiyatmo_Wijoyo.jpg" 
+    },
+    {
+      "name": "Anne Regina Nancy Toar",
+      "community": "FemaleGeek",
+      "profile": "Open source enthusiast, public speaker and community activist.",
+      "topic": "react, js framework n library",
+      "photo": "img/photo/Anne_Regina_Nancy_Toar.jpg" 
+    },
+    {
+      "name": "Muhammad Amirul IHsan",
+      "community": "SidoarjoDev",
+      "profile": "Halo Saya Amirul, web developer khususnya backend, saya suka nongkrong bareng temen komunitas.",
+      "topic": "laravel, vuejs, ",
+      "photo": "img/photo/Muhammad_Amirul_IHsan.jpg" 
+    },
+    {
+      "name": "Al Zea Arafat",
+      "community": "WP-ID Jogja",
+      "profile": "Halo, saya Zea. Saya adalah organizer dari komunitas WordPress Indonesia. Juga seorang lead UI/UX designer di salah satu startup company.",
+      "topic": "UI/UX dan Usability",
+      "photo": "img/photo/Al_Zea_Arafat.jpg" 
+    },
+    {
+      "name": "Waranugraha yogya",
+      "community": "Wordpress Jogja",
+      "profile": "Waranugraha Yogya, Web Developer & digital marketer CEO layanan Web Hosting Gapurahoster",
+      "topic": "Web development, web hosting, SEO & Digital Marketing.",
+      "photo": "img/photo/Waranugraha_yogya.jpg" 
+    }
   ]
 }
