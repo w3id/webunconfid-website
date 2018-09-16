@@ -24,12 +24,13 @@ export default class TOrganizers extends HTMLElement{
 
                 .organizer{
                     width:309px;
+                    margin-bottom: 5rem;
                 }
                 
                 .organizer t-img{
                     width:100%;
                     height:10rem;
-                    margin:2rem auto;
+                    margin:1rem auto;
                 }
                 .organizer h3{
                     margin-top:0;
@@ -103,4 +104,3 @@ export default class TOrganizers extends HTMLElement{
         });
 	}
 }
-customElements.define('t-organizers',TOrganizers);
