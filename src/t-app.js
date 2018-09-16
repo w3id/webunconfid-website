@@ -251,7 +251,7 @@ export class TApp extends TintComponent {
                     display:flex;
                     flex-direction:row;
                     justify-content:flex-end;
-                    margin:0;
+                    margin:0 4rem 0 0;
                 }
 
                 #drawer ul li{
