@@ -82,7 +82,9 @@ export default class TParticipants extends HTMLElement{
     participantCard({name, community, topic, photo}) {
         topic = topic
             .replace(/-/g,'')
-            .replace(/\n/g,',');
+            .replace(/\n/g,',')
+            .replace(/(,(?=\S)|:)/g, ', ');
+
         return html`
             <div class="participant">
             <t-img src=${photo} rounded></t-img>
