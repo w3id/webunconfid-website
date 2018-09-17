@@ -26,7 +26,7 @@ export default class TParticipants extends HTMLElement{
             }
 
             .participant{
-                width:309px;
+                width:180px;
             }
 
             .participant t-img{
