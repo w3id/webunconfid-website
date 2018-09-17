@@ -350,7 +350,7 @@ export class TApp extends TintComponent {
                                         <li><a href="#" target="_blank" rel="noopener">PHP Indonesia</a></li>
                                         <li><a href="//t.me/laravelindonesia" target="_blank" rel="noopener">Laravel Indonesia</a></li>
                                         <li><a href="#" target="_blank" rel="noopener">Generation Girl</a></li>
-                                        <li><a href="#" target="_blank" rel="noopener">WordPress Indonesia</a></li>
+                                        <li><a href="//wp-id.org/" target="_blank" rel="noopener">WordPress Indonesia</a></li>
                                         <li><a href="//t.me/polymer_id" target="_blank" rel="noopener">Polymer Indonesia</a></li>
                                         <li><a href="#" target="_blank" rel="noopener">Facebook Dev Circle</a></li>
                                         <li><a href="#" target="_blank" rel="noopener">JakartaJS</a></li>
@@ -361,6 +361,7 @@ export class TApp extends TintComponent {
                                         <li><a href="#" target="_blank" rel="noopener">Malang Frontend Dev</a></li>
                                         <li><a href="#" target="_blank" rel="noopener">BandungJS</a></li>
                                         <li><a href="//t.me/surabayadev" target="_blank" rel="noopener">SurabayaDev</a></li>
+                                        <li><a href="//hammer-code.github.io" target="_blank" rel="noopener">Hammer-Code</a></li>
                                     </ul>
                                 </div>
                             </div>
