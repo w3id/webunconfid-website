@@ -83,6 +83,7 @@ export default class TParticipants extends HTMLElement{
         topic = topic
             .replace(/-/g,'')
             .replace(/\n/g,',');
+            
         return html`
             <div class="participant">
             <t-img src=${photo} rounded></t-img>
