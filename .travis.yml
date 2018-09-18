@@ -4,6 +4,8 @@ node_js:
 script:
  — echo “Deploy!!”
 install:
- — npm install -g firebase-tools
+ — npm install -g firebase-tools yarn
+ — yarn install
+ — yarn build
 after_success:
  — firebase deploy --only hosting:webunconfid --project pwaid-dir --token $FIREBASE_TOKEN
