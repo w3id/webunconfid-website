@@ -343,24 +343,26 @@ export class TApp extends TintComponent {
                                 <h2>Komunitas Yang Hadir</h2>
                                 <div>
                                     <ul id="community-list">
-                                        <li>Female Geeks</li>
-                                        <li>ReactID</li>
-                                        <li>VueID</li>
-                                        <li>AngularID</li>
-                                        <li>PHP Indonesia</li>
-                                        <li>Laravel Indonesia</li>
-                                        <li>Generation Girl</li>
-                                        <li>WordPress Indonesia</li>
-                                        <li>Polymer Indonesia</li>
-                                        <li>Facebook Dev Circle</li>
-                                        <li>JakartaJS</li>
-                                        <li>RubyID</li>
-                                        <li>JogjaJS</li>
-                                        <li>BaliJS</li>
-                                        <li>Komunitas Programmer Makassar</li>
-                                        <li>Malang Frontend Dev</li>
-                                        <li>BandungJS</li>
-                                        <li>SurabayaDev</li>
+                                        <li><a href="//t.me/femalegeek" target="_blank" rel="noopener">Female Geeks</a></li>
+                                        <li><a href="//t.me/react_id" target="_blank" rel="noopener">ReactID</a></li>
+                                        <li><a href="//t.me/vuejsid" target="_blank" rel="noopener">VueID</a></li>
+                                        <li><a href="//t.me/AngularID" target="_blank" rel="noopener">AngularID</a></li>
+                                        <li><a href="//www.phpindonesia.id/" target="_blank" rel="noopener">PHP Indonesia</a></li>
+                                        <li><a href="//t.me/laravelindonesia" target="_blank" rel="noopener">Laravel Indonesia</a></li>
+                                        <li><a href="http://www.generationgirl.org/" target="_blank" rel="noopener">Generation Girl</a></li>
+                                        <li><a href="//wp-id.org/" target="_blank" rel="noopener">WordPress Indonesia</a></li>
+                                        <li><a href="//t.me/polymer_id" target="_blank" rel="noopener">Polymer Indonesia</a></li>
+                                        <li><a href="//developers.facebook.com/developercircles" target="_blank" rel="noopener">Facebook Dev Circle</a></li>
+                                        <li><a href="//www.meetup.com/JakartaJS/" target="_blank" rel="noopener">JakartaJS</a></li>
+                                        <li><a href="//t.me/ruby_id" target="_blank" rel="noopener">RubyID</a></li>
+                                        <li><a href="//jogja.js.org/" target="_blank" rel="noopener">JogjaJS</a></li>
+                                        <li><a href="//balijs.com" target="_blank" rel="noopener">BaliJS</a></li>
+                                        <li><a href="//bit.ly/kpmchat" target="_blank" rel="noopener">Komunitas Programmer Makassar</a></li>
+                                        <li><a href="//www.facebook.com/groups/frontendev.malang" target="_blank" rel="noopener">Malang Frontend Dev</a></li>
+                                        <li><a href="//www.meetup.com/BandungJS/" target="_blank" rel="noopener">BandungJS</a></li>
+                                        <li><a href="//t.me/surabayadev" target="_blank" rel="noopener">SurabayaDev</a></li>
+                                        <li><a href="//hammer-code.github.io" target="_blank" rel="noopener">Hammer-Code</a></li>
+                                        <li><a href="//phpbali.com" target="_blank" rel="noopener">PHPBali</a></li>
                                     </ul>
                                 </div>
                             </div>
