@@ -169,17 +169,17 @@ export class TApp extends TintComponent {
             }
 
                 
-            #venue-content{
+            #venue{
                 display:flex;
                 flex-direction:column;
                 justify-content:center;
                 align-content:left;
             }
-            #venue-content > * {
+            #venue > * {
                 flex-grow:1;
             }
 
-            #venue-content t-img{
+            #venue t-img{
                 height:300px;
             }
 
@@ -270,10 +270,10 @@ export class TApp extends TintComponent {
                 #community-list, #sponsor-list,#venue{
                     flex-direction:row;
                 }
-
+                
                 #venue > * {
                     flex-grow:1;
-                    width:50%;
+                    width:40%;
                 }
 
                 #venue t-img{

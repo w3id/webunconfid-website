@@ -9,7 +9,7 @@
     },
     {
       "name": "Salma Salsabilla",
-      "community": "FemakeGeek PHP Indonesia",
+      "community": "FemaleGeek PHP Indonesia",
       "profile": "Saya adalah seorang female programmer yang sedang bekerja di PT Codigo Cyberlin Metadata. ",
       "topic": "",
       "photo": "img/photo/Salma_Salsabilla.jpg"
@@ -349,6 +349,13 @@
       "profile": "Waranugraha Yogya, Web Developer & digital marketer CEO layanan Web Hosting Gapurahoster",
       "topic": "Web development, web hosting, SEO & Digital Marketing.",
       "photo": "img/photo/Waranugraha_yogya.jpg" 
+    },
+    {
+      "name": "Rahmat H Slamet",
+      "community": "Komunitas Programmer Makassar",
+      "profile": "Open Source Enthusiast, Software Engineer",
+      "topic": "Big Data, Cloud Computing",
+      "photo": "img/photo/Rahmat_H_Slamet.jpg" 
     }
   ]
 }

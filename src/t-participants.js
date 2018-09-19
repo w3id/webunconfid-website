@@ -26,7 +26,7 @@ export default class TParticipants extends HTMLElement{
             }
 
             .participant{
-                width:180px;
+                width:280px;
             }
 
             .participant t-img{
@@ -43,7 +43,6 @@ export default class TParticipants extends HTMLElement{
             }
 
             .participant .desc{
-                max-height:18rem;
                 margin-bottom: 3rem;
             }
 
@@ -52,6 +51,10 @@ export default class TParticipants extends HTMLElement{
             #participant-list{
                 flex-direction:row;
                 justify-content:space-between;
+            }
+
+            .participant .desc {
+                height:20rem;
             }
         }
             </style>
