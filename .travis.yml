@@ -1,12 +1,15 @@
 language: node_js
+branches:
+  only:
+  - master
 node_js:
-  - '7'
+  - '8'
 script:
   - echo 'Deploy!!'
 install:
- - npm install -g firebase-tools yarn
- - yarn install
+  - npm install -g firebase-tools yarn
+  - yarn install
 script:
- - yarn build
+  - yarn build
 after_success:
- - firebase deploy --only hosting:webunconfid --project pwaid-dir --token $FIREBASE_TOKEN
+  - firebase deploy --only hosting:webunconfid --token $FIREBASE_TOKEN
