@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "pwaid-dir"
+  },
+  "targets": {
+    "pwaid-dir": {
+      "hosting": {
+        "webunconfid": [
+          "webunconfid"
+        ]
+      }
+    }
+  }
+}
