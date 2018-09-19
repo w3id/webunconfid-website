@@ -1,4 +1,7 @@
 language: node_js
+branches:
+  only:
+  - master
 node_js:
   - '8'
 script:
@@ -9,4 +12,4 @@ install:
 script:
   - yarn build
 after_success:
-  - firebase deploy --only hosting:webunconfid --project pwaid-dir --token $FIREBASE_TOKEN
+  - firebase deploy --only hosting:webunconfid --token $FIREBASE_TOKEN

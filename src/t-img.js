@@ -1,3 +1,8 @@
+/*
+* TODO: fix issue on Firefox if webcomponent loader 
+* background-src doesn't work because style get overlapping by other style. 
+* styling in custom element should not in style
+*/
 export default class TImg extends HTMLElement {
 	constructor() {
         super();
@@ -6,11 +11,11 @@ export default class TImg extends HTMLElement {
         this.position='top';
         this.rounded=false;
         this._shadowRoot=this.attachShadow({mode: 'open'});
-        this._shadowRoot.innerHTML=this.template;
+        
 	}
   
 	static get observedAttributes() { return ['src','size','position','rounded']; }
-  
+
 	attributeChangedCallback(name, oldValue, newValue) {
 		switch(name){
             case 'src':
@@ -33,22 +38,23 @@ export default class TImg extends HTMLElement {
         return `
         <style>
             :host{
-                position:relative;
                 display:block;
             }
-            #container{
+            .container{
+                position:relative;
+                height:100%;
+            }
+            .container .img{
                 position:absolute;
                 top:0;
                 bottom:0;
                 left:0;
                 right:0;
-                border-radius:${this.rounded ? '100%' : '0'};
-                background:transparent url(${this.src}) no-repeat;
-                background-size:${this.size};
-                background-position:${this.position};
             }
         </style>
-        <div id="container"></div>
+        <div class="container">
+        <div class="img" style="border-radius:${this.rounded ? '100%' : '0'};background:transparent url(${this.src}) no-repeat;background-size:${this.size};background-position:${this.position};"></div>
+        </div>
         `;
     }
 
