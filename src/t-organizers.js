@@ -24,12 +24,12 @@ export default class TOrganizers extends HTMLElement{
 
                 .organizer{
                     width:309px;
-                    margin-bottom: 5rem;
+                    margin-bottom: 3rem;
                 }
                 
                 .organizer t-img{
                     width:100%;
-                    height:10rem;
+                    height:5rem;
                     margin:1rem auto;
                 }
                 .organizer h3{
@@ -45,7 +45,7 @@ export default class TOrganizers extends HTMLElement{
                     }
 
                     .organizer .desc{
-                        height:18rem;
+                        height:14rem;
                     }
                 }
             </style>
@@ -86,7 +86,7 @@ export default class TOrganizers extends HTMLElement{
                 </div>
                 <div class="organizer">
                 <t-img src="../img/logo/female-geek.png" size="contain" position="center"></t-img>
-                    <h3>Female Geek</h3>
+                    <h3>Female Geek PHP Indonesia</h3>
                     <div class="desc">
                         Komunitas pengembang perempuan Indonesia yang tersebar di beberapa kota di Indonesia. Fokus dalam memberdayakan dan mengajar pengembang perempuan Indonesia dalam dunia programming.
                     </div>
