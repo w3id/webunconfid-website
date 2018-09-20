@@ -34,16 +34,11 @@ export class TSchedule extends HTMLElement {
                     ${until(
                         fetch(this.icalJsonUrl)
                         .then(res => res.json())
-                        .then(e => {
+                        .then(calendar => {
                             return html`
                             ${repeat(
-                                participants.participant,
-                                participant => this.participantCard({
-                                    name: participant.name,
-                                    community: participant.community,
-                                    topic: participant.topic,
-                                    photo: participant.photo
-                                })
+                                calendar.vevent,
+                                events => this.eventCard(event)
                             )}`;
                         }),
                         html`<span> Menunggu Para Partisipan...</span>`
@@ -55,12 +50,8 @@ export class TSchedule extends HTMLElement {
 
     eventCard(event) {
         return html`
-            <div class="participant">
-            <t-img src=${photo} rounded></t-img>
-            <h3>${name}</h3>
-            <div class="community">${community}</div>
-            <div class="topic">Interested In Topic</div>
-            <div class="desc">${topic}</div>
+            <div class="event">
+            
             </div> 
             `;
     }
