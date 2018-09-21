@@ -5,6 +5,12 @@ import TOrganizers from './t-organizers.js';
 import TParticipants from './t-participants.js';
 import { register } from '../node_modules/register-service-worker/index.js'
 
+const isIntersectionObserverSupported = typeof window.IntersectionObserver === 'function';
+
+if (!isIntersectionObserverSupported) {
+    require('intersection-observer');
+}
+
 customElements.define('t-img', TImg);
 customElements.define('t-organizers', TOrganizers);
 customElements.define('t-participants', TParticipants);
