@@ -20,14 +20,17 @@ export default class TImg extends HTMLElement {
         this.position='top';
         this.rounded=false;
         this._shadowRoot=this.attachShadow({mode: 'open'});
-        this.setupObserver()
+        this.setupImageLazyLoad()
 	}
 
-    setupObserver () {
+    setupImageLazyLoad () {
         this.observer = new IntersectionObserver((entries) => {
             for (let entry of entries) {
                 if (entry.isIntersecting && !this.isImageLoaded()) {
-                    this.lazyLoadImage()
+                    fetchImage(this.src)
+                        .then((url) => {
+                            this.attachLoadedImageToImageElement(url)
+                        })
                 }
             }
         })
@@ -52,13 +55,6 @@ export default class TImg extends HTMLElement {
         const imgEl = this.getImageElement()
         imgEl.style.backgroundImage = `url(${imageUrl})` 
         this.tagImageElementLoaded()
-    }
-
-    lazyLoadImage () {
-        fetchImage(this.src)
-            .then((url) => {
-                this.attachLoadedImageToImageElement(url)
-            })
     }
   
 	static get observedAttributes() { return ['src','size','position','rounded']; }
