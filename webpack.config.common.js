@@ -3,9 +3,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
 module.exports = {
-    entry: './src/t-app.js',
+    entry: {
+      app:'./src/t-app.js',
+      schedule:'./src/t-schedule.js',
+      shell:'./src/t-shell.js'
+    },
     output: {
-        filename: 'src/t-app.js',
+        filename: 'src/t-[name].js',
         path: path.resolve(__dirname, 'dist')
       },
     resolve: {
