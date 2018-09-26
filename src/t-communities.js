@@ -39,7 +39,18 @@ export default class TCommunities extends HTMLElement {
                 }
 
                 /* Larger than mobile screen */
-                @media only screen and (min-width: 40.0rem) {
+                @media only screen and (min-width: 640px) and (max-width: 960px) {
+                    #community-columns {
+                        -moz-column-count: 2;
+                        -moz-column-gap: 10px;
+                        -webkit-column-count: 2;
+                        -webkit-column-gap: 10px;
+                        column-count: 2;
+                        column-gap: 10px;
+                    }
+                }
+
+                @media only screen and (min-width: 961px) {
                     #community-columns {
                         -moz-column-count: 3;
                         -moz-column-gap: 20px;
