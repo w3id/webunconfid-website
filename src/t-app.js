@@ -26,10 +26,12 @@ export class TApp extends HTMLElement {
         if(name==='active'){
             this.scrollTo(newValue);
         }
+        this.render();
     }
 
     connectedCallback(){
         this.render();
+        this.scrollTo(this.getAttribute('active'));
         // register('/service-worker.js', {
         //     ready (registration) {
         //     console.log('Service worker is active.')
@@ -66,11 +68,6 @@ export class TApp extends HTMLElement {
 
             a{
                 text-decoration:none;
-            }
-
-            article{
-                line-height: 1.6em;
-                margin: 0 16px;
             }
 
             
@@ -115,7 +112,7 @@ export class TApp extends HTMLElement {
 
            .block-content{
                margin:0 auto 8rem auto;
-               padding:1px 2rem;
+               padding:0 1rem;
                max-width:960px;
            }
            
@@ -288,10 +285,13 @@ export class TApp extends HTMLElement {
 
     scrollTo(selector){
         if(selector.length>0){
-            this._shadowRoot.querySelector(selector).scrollIntoView({ 
-                behavior: 'smooth',
-                block: 'start'
-            });
+            const el=this._shadowRoot.querySelector(selector);
+            if(el!==null){
+                el.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
         }
         
     }
