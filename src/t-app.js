@@ -244,6 +244,7 @@ export class TApp extends HTMLElement {
                             <li><a href="//t.me/AngularID" target="_blank" rel="noopener">AngularID</a></li>
                             <li><a href="//www.phpindonesia.id/" target="_blank" rel="noopener">PHP Indonesia</a></li>
                             <li><a href="//t.me/laravelindonesia" target="_blank" rel="noopener">Laravel Indonesia</a></li>
+                            <li><a href="https://t.me/YiiFrameworkIndonesia" target="_blank" rel="noopener">Yii Indonesia</a></li>
                             <li><a href="http://www.generationgirl.org/" target="_blank" rel="noopener">Generation Girl</a></li>
                             <li><a href="//wp-id.org/" target="_blank" rel="noopener">WordPress Indonesia</a></li>
                             <li><a href="//t.me/polymer_id" target="_blank" rel="noopener">Polymer Indonesia</a></li>
