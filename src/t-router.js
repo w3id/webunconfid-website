@@ -13,7 +13,7 @@ export default class TRouter {
             if (e.path[0].tagName!=='A') return;
             const link=e.path[0].getAttribute('href');
             //make sure the link not outside the app
-            if(link.indexOf('http')<0){
+            if(link.indexOf('http')<0 && link.substring(0,2)!=='//'){
                 this.goTo(link);
                 e.preventDefault();
             }

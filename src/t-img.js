@@ -1,11 +1,3 @@
-const fetchImage = (url) => {
-    return new Promise((resolve, reject) => {
-        const image = new Image()
-        image.onload = () => resolve(url)
-        image.onerror = (err) => reject(err)
-        image.src = url
-    })
-}
 
 /*
 * TODO: fix issue on Firefox if webcomponent loader 
@@ -23,11 +15,20 @@ export default class TImg extends HTMLElement {
         this.setupImageLazyLoad()
 	}
 
+    fetchImage(url){
+        return new Promise((resolve, reject) => {
+            const image = new Image()
+            image.onload = () => resolve(url)
+            image.onerror = (err) => reject(err)
+            image.src = url
+        })
+    }
+
     setupImageLazyLoad () {
         this.observer = new IntersectionObserver((entries) => {
             for (let entry of entries) {
                 if (entry.isIntersecting && !this.isImageLoaded()) {
-                    fetchImage(this.src)
+                    this.fetchImage(this.src)
                         .then((url) => {
                             this.attachLoadedImageToImageElement(url)
                         })

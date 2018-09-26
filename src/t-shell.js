@@ -10,6 +10,7 @@ export default class TShell extends HTMLElement{
     }
 
     connectedCallback() {
+
         this.router=new TRouter;
         
         this.router.on('/home',async ()=>{
@@ -27,10 +28,18 @@ export default class TShell extends HTMLElement{
         if(this.router.activeRoute===null){
             this.router.goTo('/home');
         }
-
+        this.addPolyfill();
         this.render();
     }
 
+    addPolyfill(){
+        if (!'IntersectionObserver' in window) {
+            const intersectionObserver=document.createElement('script');
+            intersectionObserver.setAttribute('async',true);
+            intersectionObserver.setAttribute('src','https://unpkg.com/intersection-observer@0.5.0/intersection-observer');
+            document.head.appendChild(intersectionObserver);
+        }
+    }
     render(toggle){
         window.requestAnimationFrame(()=>{
             render(this.template,this._shadowRoot);
@@ -45,7 +54,6 @@ export default class TShell extends HTMLElement{
         <style>
             :host{
                 display:block;
-                background-color:#F0F0F0;
             }
             a{
                 text-decoration:none;
