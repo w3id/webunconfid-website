@@ -15,7 +15,10 @@ export default class TCommunities extends HTMLElement {
                 :host {
                     display: block;
                 }
-
+                a{
+                    text-decoration:none;
+                }
+                
                 #community-list {
                     display:flex;
                     flex-direction:row;

@@ -35,6 +35,7 @@ export default class TShell extends HTMLElement{
         if(this.router.activeRoute===null){
             this.router.goTo('/home');
         }
+        
         this.render();
     }
 

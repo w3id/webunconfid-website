@@ -39,9 +39,10 @@ export default class TRouter {
     }
 
     setActiveRoute(url,route){
+        history.pushState(null, null, url);
         route.callback();
         this.activeRoute=route.pattern;
-        history.pushState(null, null, url);
+        
     }
 
     on(route,callback){
