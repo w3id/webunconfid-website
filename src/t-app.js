@@ -2,12 +2,14 @@ import {render,html} from '../node_modules/lit-html/lit-html.js';
 import TImg from './t-img.js';
 import TOrganizers from './t-organizers.js';
 import TParticipants from './t-participants.js';
+import TCommunities from './t-communities.js';
 import { register } from '../node_modules/register-service-worker/index.js'
 
 
 customElements.define('t-img', TImg);
 customElements.define('t-organizers', TOrganizers);
 customElements.define('t-participants', TParticipants);
+customElements.define('t-communities', TCommunities);
 
 export class TApp extends HTMLElement {
     constructor(){
@@ -120,7 +122,7 @@ export class TApp extends HTMLElement {
                width:100%;
            }
 
-            .container{
+            .app-container{
                 text-align:center; 
             }
 
@@ -137,18 +139,6 @@ export class TApp extends HTMLElement {
 
             #venue t-img{
                 height:300px;
-            }
-
-
-            #community-list{
-                display:flex;
-                flex-direction:row;
-                flex-wrap:wrap;
-                justify-content:center;
-                align-content:center;
-            }
-            #community-list li{
-                width:309px;
             }
             
             #sponsor-list{
@@ -198,7 +188,7 @@ export class TApp extends HTMLElement {
 
 
         </style>
-        <div class="container">
+        <div class="app-container">
             <div id="featured-image">
                 <div class="dark-bg"></div>
                 <a id="arrow-down" href="#main-content" @click=${(e) => this.scrollTo(e,'#tentang')}>&#8964;</a>
@@ -234,33 +224,7 @@ export class TApp extends HTMLElement {
                     </div>
                 </div>
                 <div id="community-content" class="block-content">
-                <div class="block-content" id="community">
-                    <h2>Komunitas Yang Hadir</h2>
-                    <div>
-                        <ul id="community-list">
-                            <li><a href="//t.me/femalegeek" target="_blank" rel="noopener">Female Geeks</a></li>
-                            <li><a href="//t.me/react_id" target="_blank" rel="noopener">ReactID</a></li>
-                            <li><a href="//t.me/vuejsid" target="_blank" rel="noopener">VueID</a></li>
-                            <li><a href="//t.me/AngularID" target="_blank" rel="noopener">AngularID</a></li>
-                            <li><a href="//www.phpindonesia.id/" target="_blank" rel="noopener">PHP Indonesia</a></li>
-                            <li><a href="//t.me/laravelindonesia" target="_blank" rel="noopener">Laravel Indonesia</a></li>
-                            <li><a href="https://t.me/YiiFrameworkIndonesia" target="_blank" rel="noopener">Yii Indonesia</a></li>
-                            <li><a href="http://www.generationgirl.org/" target="_blank" rel="noopener">Generation Girl</a></li>
-                            <li><a href="//wp-id.org/" target="_blank" rel="noopener">WordPress Indonesia</a></li>
-                            <li><a href="//t.me/polymer_id" target="_blank" rel="noopener">Polymer Indonesia</a></li>
-                            <li><a href="//developers.facebook.com/developercircles" target="_blank" rel="noopener">Facebook Dev Circle</a></li>
-                            <li><a href="//www.meetup.com/JakartaJS/" target="_blank" rel="noopener">JakartaJS</a></li>
-                            <li><a href="//t.me/ruby_id" target="_blank" rel="noopener">RubyID</a></li>
-                            <li><a href="//jogja.js.org/" target="_blank" rel="noopener">JogjaJS</a></li>
-                            <li><a href="//balijs.com" target="_blank" rel="noopener">BaliJS</a></li>
-                            <li><a href="//bit.ly/kpmchat" target="_blank" rel="noopener">Komunitas Programmer Makassar</a></li>
-                            <li><a href="//www.facebook.com/groups/frontendev.malang" target="_blank" rel="noopener">Malang Frontend Dev</a></li>
-                            <li><a href="//www.meetup.com/BandungJS/" target="_blank" rel="noopener">BandungJS</a></li>
-                            <li><a href="//t.me/surabayadev" target="_blank" rel="noopener">SurabayaDev</a></li>
-                            <li><a href="//hammer-code.github.io" target="_blank" rel="noopener">Hammer-Code</a></li>
-                            <li><a href="//phpbali.com" target="_blank" rel="noopener">PHPBali</a></li>
-                        </ul>
-                    </div>
+                    <t-communities></t-communities>
                 </div>
                 <div class="block-content" id="organizer-list">
                     <t-organizers></t-organizers>
@@ -268,10 +232,10 @@ export class TApp extends HTMLElement {
                 <div class="block-content" id="participants-list">
                     <t-participants></t-participants>
                 </div>
-                <div class="block-content">
+                <div class="block-content" id="sponsor">
                     <h2>Sponsor</h2>
                     <div id="sponsor-list">
-                        <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
+                        <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.png" size="contain" position="center"></t-img></a>
                         <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Line ke Sirclo.com" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
                     </div>
                 </div>

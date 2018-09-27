@@ -14,32 +14,39 @@ export default class TShell extends HTMLElement{
         this.router=new TRouter;
         
         this.router.on('/home',async ()=>{
-            const module= await import('./t-app.js');
+            
+            const module= this.importModule('/src/t-app.js');
             this.activePage=html`<t-app active="${window.location.hash}"></t-app>`;
             this.render(true);
         });
 
         this.router.on('/schedule',async ()=>{
-            const TSchedule= await import('./t-schedule.js');
+            const TSchedule= this.importModule('/src/t-schedule.js');
             this.activePage=html`<t-schedule></t-schedule>`;
+            this.render(true);
+        });
+
+        this.router.on('/coc',async ()=>{
+            const TSchedule= this.importModule('/src/t-coc.js');
+            this.activePage=html`<t-coc></t-coc>`;
             this.render(true);
         });
 
         if(this.router.activeRoute===null){
             this.router.goTo('/home');
         }
-        this.addPolyfill();
+        
         this.render();
     }
 
-    addPolyfill(){
-        if (!'IntersectionObserver' in window) {
-            const intersectionObserver=document.createElement('script');
-            intersectionObserver.setAttribute('async',true);
-            intersectionObserver.setAttribute('src','https://unpkg.com/intersection-observer@0.5.0/intersection-observer');
-            document.head.appendChild(intersectionObserver);
-        }
+    importModule(url){
+        const script=document.createElement('script');
+        script.setAttribute('src',url);
+        script.setAttribute('type','module');
+        document.head.appendChild(script);
     }
+
+    
     render(toggle){
         window.requestAnimationFrame(()=>{
             render(this.template,this._shadowRoot);
@@ -58,10 +65,14 @@ export default class TShell extends HTMLElement{
             a{
                 text-decoration:none;
             }
-            #container{
+            #drawer-container{
                 position: relative;
                 height: 100vh;
                 width: 100vw;
+            }
+
+            header{
+                padding:0 1rem;
             }
 
             #drawer{
@@ -77,6 +88,7 @@ export default class TShell extends HTMLElement{
 
             #drawer ul{
                 list-style:none;
+                padding-left:1rem;
             }
 
             #drawer.active{
@@ -163,7 +175,7 @@ export default class TShell extends HTMLElement{
              }
 
         </style>
-        <div id="container">
+        <div id="drawer-container">
                 <a id="nav-toggle" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&#9776;</a>
                 <div id="drawer">
                         <a id="nav-close" href="#" @click=${(e) => { e.preventDefault(); this._shadowRoot.querySelector('#drawer').classList.toggle('active')}}>&times;</a>
@@ -174,9 +186,11 @@ export default class TShell extends HTMLElement{
                             <li><a href="/home#tentang">Tentang</a></li>
                             <li><a href="/home#venue-content">Lokasi</a></li>
                             <li><a href="/schedule">Jadwal</a></li>
+                            <li><a href="/coc">Kode Etik</a></li>
                             <li><a href="/home#community-content">Komunitas</a></li>
                             <li><a href="/home#organizer-list">Organizer</a></li>
                             <li><a href="/home#participants-list">Participant</a></li>
+                            <li><a href="/home#sponsor">Sponsors</a></li>
                         </ul>
                 </div>
                 <div id="content-container">
