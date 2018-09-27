@@ -225,69 +225,38 @@ export class TApp extends HTMLElement {
                 </div>
                 <div id="community-content" class="block-content">
                 <div class="block-content" id="community">
-                    <t-communities></t-communities>
+                    <h2>Komunitas Yang Hadir</h2>
+                    <div>
+                        <ul id="community-list">
+                            <li><a href="//t.me/femalegeek" target="_blank" rel="noopener">Female Geeks</a></li>
+                            <li><a href="//t.me/react_id" target="_blank" rel="noopener">ReactID</a></li>
+                            <li><a href="//t.me/vuejsid" target="_blank" rel="noopener">VueID</a></li>
+                            <li><a href="//t.me/AngularID" target="_blank" rel="noopener">AngularID</a></li>
+                            <li><a href="//www.phpindonesia.id/" target="_blank" rel="noopener">PHP Indonesia</a></li>
+                            <li><a href="//t.me/laravelindonesia" target="_blank" rel="noopener">Laravel Indonesia</a></li>
+                            <li><a href="https://t.me/YiiFrameworkIndonesia" target="_blank" rel="noopener">Yii Indonesia</a></li>
+                            <li><a href="http://www.generationgirl.org/" target="_blank" rel="noopener">Generation Girl</a></li>
+                            <li><a href="//wp-id.org/" target="_blank" rel="noopener">WordPress Indonesia</a></li>
+                            <li><a href="//t.me/polymer_id" target="_blank" rel="noopener">Polymer Indonesia</a></li>
+                            <li><a href="//developers.facebook.com/developercircles" target="_blank" rel="noopener">Facebook Dev Circle</a></li>
+                            <li><a href="//www.meetup.com/JakartaJS/" target="_blank" rel="noopener">JakartaJS</a></li>
+                            <li><a href="//t.me/ruby_id" target="_blank" rel="noopener">RubyID</a></li>
+                            <li><a href="//jogja.js.org/" target="_blank" rel="noopener">JogjaJS</a></li>
+                            <li><a href="//balijs.com" target="_blank" rel="noopener">BaliJS</a></li>
+                            <li><a href="//bit.ly/kpmchat" target="_blank" rel="noopener">Komunitas Programmer Makassar</a></li>
+                            <li><a href="//www.facebook.com/groups/frontendev.malang" target="_blank" rel="noopener">Malang Frontend Dev</a></li>
+                            <li><a href="//www.meetup.com/BandungJS/" target="_blank" rel="noopener">BandungJS</a></li>
+                            <li><a href="//t.me/surabayadev" target="_blank" rel="noopener">SurabayaDev</a></li>
+                            <li><a href="//hammer-code.github.io" target="_blank" rel="noopener">Hammer-Code</a></li>
+                            <li><a href="//phpbali.com" target="_blank" rel="noopener">PHPBali</a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="block-content" id="organizer-list">
                     <t-organizers></t-organizers>
                 </div>
-                <div id="content-container">
-                        <div id="featured-image">
-                            <div class="dark-bg"></div>
-                            <a id="arrow-down" href="#main-content" @click=${(e) => this.scrollTo(e,'#tentang')}>&#8964;</a>
-                            <div class="content">
-                                <h1>WebUnconfID</h1>
-                                <h4>Web Community Leaders Bootcamp</h4>
-                                <p>Yogyakarta, 29-30 September 2018</p>
-                                <div class="venue">
-                                <h4>Ethes Coworking &amp; Coliving Space</h4>
-                                <p>Jl. Umbul Permai No.88, Lojajar, <br/>Kabupaten Sleman, Daerah Istimewa Yogyakarta</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div id="main-content">
-                            <div id="tentang" class="block-content">
-                                <h2>Bootcamp Untuk Aktivis Komunitas Pengembang Web Indonesia</h2>
-                                <article>
-                                <p>Indonesia adalah negara besar dengan pertumbuhan industri startup yang sangat cepat. Tapi pertumbuhan ini tidak dibarengi dengan pertumbuhan suplai talenta. Bahkan lulusan universitas belum memenuhi kebutuhan standar industri. Karena itu komunitas di sini memainkan peran yang sangat penting untuk mengembangkan talenta kita dan menyiapkan mereka untuk siap dengan standar industri.
-                                </p>
-                                <p>Bootcamp ini diperuntukkan untuk kalian yang aktif di komunitas pengembang web Indonesia sehingga kita bisa saling mengenal satu sama lain dan bersama-sama berdiskusi untuk membuat para pengembang web di Indonesia bisa membuat web yang lebih baik.</p>
-                                </article>
-                            </div>
-                            <div id="venue-content" class="block-content">
-                                <h2>Lokasi</h2>
-                                <div id="venue">
-                                    <t-img src="img/ethes-facade.jpg"></t-img>
-                                    <article>
-                                        <h4>Ethes Coworking &amp; Coliving Space</h4>
-                                        <p>Jl. Umbul Permai No.88, Lojajar, <br/>Kabupaten Sleman, Daerah Istimewa Yogyakarta</p>
-                                        <p>Ethes coworking &amp; coliving space adalah coliving space pertama di Yogyakarta yang diperuntukkan untuk freelancers dan entrepreneurs untuk tinggal dan bekerja.</p>
-                                        <p><a href="https://goo.gl/maps/2GWpi5SbTrE2">Lihat di Google Maps</a></p>
-                                    </article>
-                                </div>
-                            </div>
-                            <div id="community-content" class="block-content">
-                            <div class="block-content" id="community">
-                                <t-communities></t-communities>
-                            </div>
-                            <div class="block-content" id="organizer-list">
-                                <t-organizers></t-organizers>
-                            </div>
-                            <div class="block-content" id="participants-list">
-                                <t-participants></t-participants>
-                            </div>
-                            <div class="block-content">
-                                <h2>Sponsor</h2>
-                                <div id="sponsor-list">
-                                    <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
-                                    <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Line ke Sirclo.com" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
-                                </div>
-                            </div>
-                            <div id="footer" class="block-content">
-                                <p>Develop by <a href="//github.com/tyohan">@tyohan</a>,<a href="//github.com/ri7nz">@ri7nz</a> and <a href="//github.com/satyakresna">@satyakresna</a>. Available in our <a href="//github.com/w3id/webunconfid-website">Github</a>.</p>
-                                <p>Join our <a href="https://t.me/wwwid_pwa">group discussion</a> and read our <a href="https://medium.com/wwwid">publication</a></p>
-                            </div>
-                        </div>
-                        
+                <div class="block-content" id="participants-list">
+                    <t-participants></t-participants>
                 </div>
                 <div class="block-content">
                     <h2>Sponsor</h2>
