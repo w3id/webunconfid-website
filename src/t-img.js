@@ -1,9 +1,3 @@
-
-/*
-* TODO: fix issue on Firefox if webcomponent loader 
-* background-src doesn't work because style get overlapping by other style. 
-* styling in custom element should not in style
-*/
 export default class TImg extends HTMLElement {
 	constructor() {
         super();
@@ -11,21 +5,23 @@ export default class TImg extends HTMLElement {
         this.size='cover';
         this.position='top';
         this.rounded=false;
+        this.observer=null;
         this._shadowRoot=this.attachShadow({mode: 'open'});
-        this.setupImageLazyLoad()
-	}
+    }
+    
 
     fetchImage(url){
         return new Promise((resolve, reject) => {
-            const image = new Image()
-            image.onload = () => resolve(url)
-            image.onerror = (err) => reject(err)
-            image.src = url
+            const image = new Image();
+            image.onload = () => resolve(url);
+            image.onerror = (err) => reject(err);
+            image.src = url;
         })
     }
 
     setupImageLazyLoad () {
         this.observer = new IntersectionObserver((entries) => {
+            
             for (let entry of entries) {
                 if (entry.isIntersecting && !this.isImageLoaded()) {
                     this.fetchImage(this.src)
@@ -97,13 +93,14 @@ export default class TImg extends HTMLElement {
             }
         </style>
         <div class="container">
-        <div class="img" style="border-radius:${this.rounded ? '100%' : '0'};background:transparent url(img/image-placeholder.png) no-repeat;background-size:${this.size};background-position:${this.position};"></div>
+        <div class="img" style="border-radius:${this.rounded ? '100%' : '0'};background:transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat;background-size:${this.size};background-position:${this.position};"></div>
         </div>
         `;
     }
 
 	connectedCallback() {
-		this.render();
+        this.render();
+        this.setupImageLazyLoad();
 	}
   
 	get country() {
