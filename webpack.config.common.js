@@ -6,7 +6,8 @@ module.exports = {
     entry: {
       app:'./src/t-app.js',
       schedule:'./src/t-schedule.js',
-      shell:'./src/t-shell.js'
+      shell:'./src/t-shell.js',
+      coc:'./src/t-coc.js'
     },
     output: {
         filename: 'src/t-[name].js',

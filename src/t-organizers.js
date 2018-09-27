@@ -59,7 +59,7 @@ export default class TOrganizers extends HTMLElement{
                     </div>
                 </div>
                 <div class="organizer">
-                    <t-img src="../img/logo/wwwid.svg" size="contain" position="center"></t-img>
+                    <t-img src="../img/logo/wwwid.png" size="contain" position="center"></t-img>
                     <h3>WWWID</h3>
                     <div class="desc">
                         Komunitas web yang aktif di Telegram Group dan Medium untuk mendorong pertumbuhan website modern di Indonesia.

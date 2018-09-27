@@ -4,7 +4,7 @@ const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 const merge = require('webpack-merge');
 const common = require('./webpack.config.common.js');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+//const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = merge(common, {
   mode: 'production',
@@ -19,7 +19,7 @@ module.exports = merge(common, {
     ]
   },
   plugins:[
-    new CleanWebpackPlugin(['dist/*']),
+    //new CleanWebpackPlugin(['dist/*']),
     new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }),
   ]
 });

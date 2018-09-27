@@ -27,7 +27,7 @@ export default class TSchedule extends HTMLElement {
             <style>
                 :host{
                     display:block;
-                    backgroun:#FFF;
+                    background:#FFF;
                 }
                 .featured-image{
                     background: url(../img/featured.jpg) no-repeat center center fixed;
@@ -45,8 +45,11 @@ export default class TSchedule extends HTMLElement {
                 }
 
                 #schedule-container{
-                    padding:0 1rem;
+                    max-width:960px;
+                    margin:0 auto;
+                    padding:0 1rem 5rem 1rem;
                 }
+
                 .date{
                     margin:4rem 0;
                     font-size:2rem;

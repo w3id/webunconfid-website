@@ -120,7 +120,7 @@ export class TApp extends HTMLElement {
                width:100%;
            }
 
-            .container{
+            .app-container{
                 text-align:center; 
             }
 
@@ -198,7 +198,7 @@ export class TApp extends HTMLElement {
 
 
         </style>
-        <div class="container">
+        <div class="app-container">
             <div id="featured-image">
                 <div class="dark-bg"></div>
                 <a id="arrow-down" href="#main-content" @click=${(e) => this.scrollTo(e,'#tentang')}>&#8964;</a>
@@ -234,7 +234,7 @@ export class TApp extends HTMLElement {
                     </div>
                 </div>
                 <div id="community-content" class="block-content">
-                <div class="block-content" id="community">
+                <div id="community">
                     <h2>Komunitas Yang Hadir</h2>
                     <div>
                         <ul id="community-list">
@@ -268,10 +268,10 @@ export class TApp extends HTMLElement {
                 <div class="block-content" id="participants-list">
                     <t-participants></t-participants>
                 </div>
-                <div class="block-content">
+                <div class="block-content" id="sponsor">
                     <h2>Sponsor</h2>
                     <div id="sponsor-list">
-                        <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.jpeg" size="contain" position="center"></t-img></a>
+                        <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.png" size="contain" position="center"></t-img></a>
                         <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Line ke Sirclo.com" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
                     </div>
                 </div>

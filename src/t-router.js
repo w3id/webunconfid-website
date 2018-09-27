@@ -6,12 +6,13 @@ export default class TRouter {
         this.activeRoute=null;
         this.initEvent();
     }
-
+    // need to fix this on safari to use composedPath
     initEvent(){
         //handle if a link click and prevent to reload the page
         document.addEventListener('click',(e) => {
-            if (e.path[0].tagName!=='A') return;
-            const link=e.path[0].getAttribute('href');
+            const path=e.composedPath();
+            if (path[0].nodeName!=='A') return;
+            const link=path[0].getAttribute('href');
             //make sure the link not outside the app
             if(link.indexOf('http')<0 && link.substring(0,2)!=='//'){
                 this.goTo(link);
