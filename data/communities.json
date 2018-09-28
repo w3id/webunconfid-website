@@ -1,0 +1,88 @@
+{
+  "community": [
+    {
+      "name": "Female Geeks",
+      "url": "http://t.me/femalegeek"
+    },
+    {
+      "name": "ReactID",
+      "url": "http://t.me/react_id"
+    },
+    {
+      "name": "VueID",
+      "url": "http://t.me/vuejsid"
+    },
+    {
+      "name": "AngularID",
+      "url": "http://t.me/AngularID"
+    },
+    {
+      "name": "PHP Indonesia",
+      "url": "http://www.phpindonesia.id/"
+    },
+    {
+      "name": "Laravel Indonesia",
+      "url": "//t.me/laravelindonesia"
+    },
+    {
+      "name": "Generation Girl",
+      "url": "http://www.generationgirl.org/"
+    },
+    {
+      "name": "WordPress Indonesia",
+      "url": "http://wp-id.org/"
+    },
+    {
+      "name": "Polymer Indonesia",
+      "url": "http://t.me/polymer_id"
+    },
+    {
+      "name": "Facebook Developer Circle",
+      "url": "http://developers.facebook.com/developercircles"
+    },
+    {
+      "name": "JakartaJS",
+      "url": "http://www.meetup.com/JakartaJS/"
+    },
+    {
+      "name": "RubyID",
+      "url": "http://t.me/ruby_id"
+    },
+    {
+      "name": "JogjaJS",
+      "url": "http://jogja.js.org"
+    },
+    {
+      "name": "BaliJS",
+      "url": "http://balijs.com"
+    },
+    {
+      "name": "Komunitas Programmer Makassar",
+      "url": "http://bit.ly/kpmchat"
+    },
+    {
+      "name": "Malang Frontend Dev",
+      "url": "http://www.facebook.com/groups/frontendev.malang"
+    },
+    {
+      "name": "BandungJS",
+      "url": "http://www.meetup.com/BandungJS/"
+    },
+    {
+      "name": "SurabayaDev",
+      "url": "http://t.me/surabayadev"
+    },
+    {
+      "name": "Hammer-Code",
+      "url": "http://hammer-code.github.io"
+    },
+    {
+      "name": "PHPBali",
+      "url": "http://phpbali.com"
+    },
+    {
+      "name": "Yii Framework Indonesia",
+      "url": "http://yiiframework.id/"
+    }
+  ]
+}

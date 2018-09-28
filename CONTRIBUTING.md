@@ -2,7 +2,8 @@
 Terdapat tiga jalan bagi Anda jika berkontribusi melalui Github:
 1. Memberi bintang ⭐️ pada repository ini.
 1. Mengirimkan [issue](https://github.com/w3id/webunconfid-website/issues).
-1. Mengirimkan pull request. <br />
+1. Jangan mengirimkan pull request tanpa ada issue agar tidak overlapping
+1. Mengirimkan pull request ke branch `dev`. <br />
    Jika Anda mengirimkan pull request, pastikan fitur atau pembaharuan yang ingin Anda kerjakan tidak dilakukan pada branch master agar memudahkan maintainer project dan tidak mengganggu jalannya repository yang sedang dikerjakan.
    Nb: *Kebijakan ini kembali kepada maintainer project*.
 
