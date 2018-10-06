@@ -356,6 +356,69 @@
       "profile": "Open Source Enthusiast, Software Engineer",
       "topic": "Big Data, Cloud Computing",
       "photo": "img/photo/Rahmat_H_Slamet.jpg" 
+    },
+    {
+      "name": "Reyhan Sofian",
+      "community": "Facebook Developers Circle Malang",
+      "profile": "Co-lead Facebook Developer Circle Malang, Senior software engineer di Kata.ai, suka dengan Javascript dan suka dengan hal-hal baru di dunia teknologi",
+      "topic": "Javascript, ReactJS, NodeJS, Web Development, Docker",
+      "photo": "img/photo/Reyhan_Sofian.jpg" 
+    },
+    {
+      "name": "Mirza Chilman Garin",
+      "community": "Facebook Developers Circle Semarang",
+      "profile": "Community Builder Semarang. #SaatnyaSemarang",
+      "topic": "Modern Web Apps, ML, NLP, React, JavaScript",
+      "photo": "img/photo/Mirza_Chilman_Garin.jpg" 
+    },
+    {
+      "name": "Leontius Adhika Pradhana",
+      "community": "Sirclo",
+      "profile": "CTO at Sirclo",
+      "topic": "PWA, web components, React, people development",
+      "photo": "img/photo/Leontius_Adhika_Pradhana.jpg" 
+    },
+    {
+      "name": "Anggie Bratadinata",
+      "community": "Tiket.com",
+      "profile": "Sr. Principal Developer @ Tiket.com",
+      "topic": "Frontend, JS, dll.",
+      "photo": "img/photo/Anggie_Bratadinata.jpg" 
+    },
+    {
+      "name": "Ihsan Fauzi Rahman",
+      "community": "Tiket.com",
+      "profile": "I love to learn new Technology, combine it with another Technology then create something new out of it.",
+      "topic": "ReactJS, Javascript, NodeJS, Web Development, Code Design",
+      "photo": "img/photo/Ihsan_Fauzi_Rahman.jpg" 
+    },
+    {
+      "name": "Kenneth Darmawan Lay",
+      "community": "Sirclo",
+      "profile": "Product Owner for SIRCLO Store",
+      "topic": "Learning more about Optimizing Front-End Performance, Progressive Web Application, and Product Development Roadmap",
+      "photo": "img/photo/Kenneth_Darmawan_Lay.jpg" 
+    },
+    {
+      "name": "Yohana Vitrawati",
+      "community": "Sirclo",
+      "profile": "Frontend Web Developer, Software Engineer at SIRCLO.",
+      "topic": "Web development, PWA, AMP, javascript, web performance",
+      "photo": "img/photo/Yohana_Vitrawati.jpg" 
+    },
+    {
+      "name": "Vinsensius Danny",
+      "community": "Tiket.com",
+      "profile": "was born a backend, grew up to a frontend",
+      "topic": "Frontend Framework, JS, React, Vue, UI/UX, Laravel",
+      "photo": "img/photo/Vinsensius_Danny.jpg" 
+    },
+    {
+      "name": "Deni Setyawan",
+      "community": "Tiket.com",
+      "profile": "Lead Hotel Development di Tiket.com",
+      "topic": "ReactJS, Javascript, web performance, PWA, Front End Architectures",
+      "photo": "img/photo/Deni_Setyawan.jpg" 
     }
   ]
 }
