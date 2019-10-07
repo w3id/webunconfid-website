@@ -13,10 +13,6 @@
       "url": "http://t.me/vuejsid"
     },
     {
-      "name": "AngularID",
-      "url": "http://t.me/AngularID"
-    },
-    {
       "name": "PHP Indonesia",
       "url": "http://www.phpindonesia.id/"
     },
@@ -33,20 +29,12 @@
       "url": "http://wp-id.org/"
     },
     {
-      "name": "Polymer Indonesia",
-      "url": "http://t.me/polymer_id"
-    },
-    {
       "name": "Facebook Developer Circle",
       "url": "http://developers.facebook.com/developercircles"
     },
     {
       "name": "JakartaJS",
       "url": "http://www.meetup.com/JakartaJS/"
-    },
-    {
-      "name": "RubyID",
-      "url": "http://t.me/ruby_id"
     },
     {
       "name": "JogjaJS",
@@ -83,6 +71,26 @@
     {
       "name": "Yii Framework Indonesia",
       "url": "http://yiiframework.id/"
+    },
+    {
+      "name": "Sidoarjo Dev",
+      "url": "https://t.me/sidoarjodev"
+    },
+    {
+      "name": "SekolahKoding",
+      "url": "https://sekolahkoding.com"
+    },
+    {
+      "name": "Web Programming UNPAS",
+      "url": "youtube.com/webprogrammingUNPAS"
+    },
+    {
+      "name": "Podcast Dev. Muslim",
+      "url": "https://devmuslim.id"
+    },
+    {
+      "name": "WWWID",
+      "url": "https://t.me/wwwid_pwa"
     }
   ]
 }
