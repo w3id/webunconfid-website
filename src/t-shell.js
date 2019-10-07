@@ -185,12 +185,7 @@ export default class TShell extends HTMLElement{
                         <ul id="menu">
                             <li><a href="/home#tentang">Tentang</a></li>
                             <li><a href="/home#venue-content">Lokasi</a></li>
-                            <li><a href="/schedule">Jadwal</a></li>
                             <li><a href="/coc">Kode Etik</a></li>
-                            <li><a href="/home#community-content">Komunitas</a></li>
-                            <li><a href="/home#organizer-list">Organizer</a></li>
-                            <li><a href="/home#participants-list">Participant</a></li>
-                            <li><a href="/home#sponsor">Sponsors</a></li>
                         </ul>
                 </div>
                 <div id="content-container">
