@@ -1,4 +1,4 @@
-# Website untuk WebunconfID
+# Website Untuk WebunconfID
 
 Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-Html](https://github.com/Polymer/lit-html) dan [TintJS](https://github.com/tyohan/tint-web-component).
 
@@ -6,7 +6,7 @@ Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-H
 
 [https://webunconfid.wwwid.org/](https://webunconfid.wwwid.org/)
 
-## Cara menjalankan website
+## Cara Menjalankan Website
 
 1. Pastikan sudah clone repository atau mengunduh repository ini.
 1. Menuju ke root project ```webunconfid-website``` via terminal.
