@@ -175,7 +175,7 @@ export class TApp extends HTMLElement {
                 <div id="last-event" class="block-content">
                     <h3>WebUnconf 2018</h3>
                     <article>
-                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tfSXwOkpGu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="100%" height="250" src="https://www.youtube-nocookie.com/embed/tfSXwOkpGu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
                     </article>
                 </div>
                 <div id="venue-content" class="block-content">
