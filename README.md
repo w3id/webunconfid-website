@@ -1,6 +1,6 @@
 # Website untuk WebunconfID
 
-Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-Html](https://github.com/Polymer/lit-html) dan [TintJS](https://github.com/tyohan/tint-web-component).
+Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-Html](https://github.com/Polymer/lit-html) dan module bundler Rollup.
 
 ## Live
 
@@ -11,7 +11,8 @@ Website untuk acara webunconfid menggunakan Web Components dengan bantuan [Lit-H
 1. Pastikan sudah clone repository atau mengunduh repository ini.
 1. Menuju ke root project ```webunconfid-website``` via terminal.
 1. Untuk mengunduh depedencies yang diperlukan, jalankan perintah ```npm install``` atau ```yarn``` atau ```yarn install```.
-1. Untuk menjalankan website di browser, Anda bisa menggunakan [**Open With Live Server**](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) yang ada di VS Code atau menggunakan [**serve**](https://www.npmjs.com/package/serve) dan jalankan perintah ```serve``` di root project.
+1. Jalankan development server dengan `npm run dev`. 
+1. Untuk production jalankan `npm run production` untuk build
 
 ## Berkontribusi
 Kami terbuka dengan kontribusi Anda, entah itu berupa memberi tanda bintang ⭐️ pada repository ini, mengirimkan [issue](https://github.com/w3id/webunconfid-website/issues) dan pull request. Untuk detailnya silahkan dibaca di halaman [kontribusi](CONTRIBUTING.md).
