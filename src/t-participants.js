@@ -89,7 +89,7 @@ export default class TParticipants extends HTMLElement{
             
         return html`
             <div class="participant">
-            <t-img src=${photo} rounded></t-img>
+            <t-img src=${photo} alt=${name} rounded></t-img>
             <h3>${name}</h3>
             <div class="community">${community}</div>
             <div class="topic">Interested In Topic</div>

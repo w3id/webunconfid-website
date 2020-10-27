@@ -4,18 +4,25 @@ export default class TImg extends HTMLElement {
         this.src='';
         this.size='cover';
         this.position='top';
+        this.alt = ''
         this.rounded=false;
         this.observer=null;
         this._shadowRoot=this.attachShadow({mode: 'open'});
+        this.native = false;
+        if ('loading' in HTMLImageElement.prototype) {
+            // supported in browser
+            this.native = true;
+        }
     }
     
 
-    fetchImage(url){
+    fetchImage(url,alt){
         return new Promise((resolve, reject) => {
             const image = new Image();
             image.onload = () => resolve(url);
             image.onerror = (err) => reject(err);
             image.src = url;
+            image.alt = alt;
         })
     }
 
@@ -24,7 +31,7 @@ export default class TImg extends HTMLElement {
             
             for (let entry of entries) {
                 if (entry.isIntersecting && !this.isImageLoaded()) {
-                    this.fetchImage(this.src)
+                    this.fetchImage(this.src,this.alt)
                         .then((url) => {
                             this.attachLoadedImageToImageElement(url)
                         })
@@ -75,6 +82,10 @@ export default class TImg extends HTMLElement {
     }
     
     get template(){
+        let img = `<div class="img" style="border-radius:${this.rounded ? '100%' : '0'};background:transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat;"></div>`;
+        if(this.native){
+            img = `<img src="${this.src}" alt="${this.alt}">`;
+        }
         return `
         <style>
             :host{
@@ -90,24 +101,34 @@ export default class TImg extends HTMLElement {
                 bottom:0;
                 left:0;
                 right:0;
+                background-size:${this.size};
+                background-position:${this.position};
+            }
+
+            .container img {
+                position:absolute;
+                top:0;
+                bottom:0;
+                left:0;
+                right:0;
+                display:block;
+                width:100%;
+                height:100%;
+                object-position: 50% top;
+                object-fit:${this.size};
+                border-radius:${this.rounded ? '100%' : '0'};
             }
         </style>
         <div class="container">
-        <div class="img" style="border-radius:${this.rounded ? '100%' : '0'};background:transparent url(data:image/gif;base64,R0lGODlhAQABAIAAAMLCwgAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==) no-repeat;background-size:${this.size};background-position:${this.position};"></div>
+            ${img}
         </div>
         `;
     }
 
 	connectedCallback() {
         this.render();
-        this.setupImageLazyLoad();
-	}
-  
-	get country() {
-		return this._countryCode;
-	}
-	set country(v) {
-		this.setAttribute('country', v);
+        if(!this.native)
+            this.setupImageLazyLoad();
 	}
     
 	render(){

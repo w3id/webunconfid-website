@@ -4,42 +4,23 @@
   "description": "website for webunconfid event",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --hot --color --open --config webpack.config.dev.js",
-    "build": "cross-env NODE_ENV=production node_modules/.bin/webpack",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "cross-env NODE_ENV=development npx rollup --config --watch",
+    "production": "cross-env NODE_ENV=production npx rollup --config",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npm run production"
   },
   "author": "Yohan Totting <tyohan@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "lit-html": "^0.11.0",
-    "milligram": "^1.3.0",
-    "register-service-worker": "^1.5.2",
-    "tint-web-component": "0.0.4"
+    "lit-html": "^0.11.4",
+    "milligram": "^1.3.0"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-syntax-dynamic-import": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "babel-loader": "^8.0.2",
-    "clean-webpack-plugin": "^0.1.19",
-    "copy-webpack-plugin": "^4.5.2",
-    "cross-env": "^5.2.0",
-    "css-loader": "^1.0.0",
-    "extract-loader": "^3.0.0",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
-    "file-loader": "^2.0.0",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "imagemin-webpack-plugin": "^2.2.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "spawn-loader": "^6.0.0",
-    "uglifyjs-webpack-plugin": "^1.3.0",
-    "webpack": "^4.17.2",
-    "webpack-cli": "^3.1.0",
-    "webpack-dev-server": "^3.1.8",
-    "webpack-merge": "^4.1.4",
-    "webpack-split-chunks": "^0.2.1",
-    "workbox-webpack-plugin": "^3.5.0"
+    "@rollup/plugin-node-resolve": "^10.0.0",
+    "cross-env": "^7.0.2",
+    "rollup": "^2.32.1",
+    "rollup-plugin-copy": "^3.3.0",
+    "rollup-plugin-serve": "^1.0.4",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }

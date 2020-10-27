@@ -62,9 +62,10 @@ export default class TShell extends HTMLElement{
             :host{
                 display:block;
             }
-            a{
-                text-decoration:none;
+            h2{
+                margin:1rem 0;
             }
+
             #drawer-container{
                 position: relative;
                 height: 100vh;
@@ -103,24 +104,22 @@ export default class TShell extends HTMLElement{
                 position: fixed;
                 left: 1rem;
                 top:1rem;
-                font-size: 3rem;
+                font-size: 2rem;
                 text-decoration: none;
                 color: #FFF;
                 z-index:100;
-                vertical-align:top;
-                height: 50px;
-                width: 50px;
+                line-height:3rem;
+                height: 3rem;
+                width: 3rem;
                 text-align: center;
-                border-radius: 100%;
+                border-radius: 50%;
                 background-color: #000;
-                -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-                box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
             }
             #nav-close{
                 position: absolute;
                 right: 2rem;
-                font-size: 3rem;
+                font-size: 2rem;
+                line-height: 1em;
                 top:1rem;
                 padding:0;
                 margin:0;
