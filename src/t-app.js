@@ -50,7 +50,7 @@ export class TApp extends HTMLElement {
 
             
             #featured-image{
-                background: url(../img/featured.jpg) no-repeat center center fixed;
+                background: url(../img/webunconf18_800.jpg) no-repeat center center fixed;
                 background-size: cover;
                 height: 100vh;
                 margin-bottom:5rem;
@@ -103,19 +103,7 @@ export class TApp extends HTMLElement {
             }
 
                 
-            #venue{
-                display:flex;
-                flex-direction:column;
-                justify-content:center;
-                align-content:left;
-            }
-            #venue > * {
-                flex-grow:1;
-            }
-
-            #venue t-img{
-                height:300px;
-            }
+        
             
             #sponsor-list{
                 display:flex;
@@ -142,24 +130,21 @@ export class TApp extends HTMLElement {
             
 
             /* Larger than mobile screen */
-            @media (min-width: 40.0rem) {                 
+            @media (min-width: 40.0rem) {
+                #featured-image{
+                    background: url(../img/webunconf18.jpg) no-repeat center center fixed;
+                    
+                }
                 #community-list, #sponsor-list,#venue{
                     flex-direction:row;
                 }
                 
-                #venue > * {
-                    flex-grow:1;
-                    width:40%;
-                }
 
                 #venue t-img{
                     height:300px;
                 }
                 
-                #venue article{
-                    text-align:left;
-                    padding:0 2rem;
-                }
+    
             }
 
 
@@ -169,12 +154,11 @@ export class TApp extends HTMLElement {
                 <div class="dark-bg"></div>
                 <a id="arrow-down" href="#main-content" @click=${(e) => this.scrollTo(e,'#tentang')}>&#8964;</a>
                 <div class="content">
-                    <h1>WebUnconfID</h1>
+                    <h1>WebUnconf 2019</h1>
                     <h4>Web Community Leaders Bootcamp</h4>
-                    <p>Yogyakarta, 29-30 September 2018</p>
+                    <p>Batu, 30 November-1 December 2019</p>
                     <div class="venue">
-                    <h4>Ethes Coworking &amp; Coliving Space</h4>
-                    <p>Jl. Umbul Permai No.88, Lojajar, <br/>Kabupaten Sleman, Daerah Istimewa Yogyakarta</p>
+                    
                     </div>
                 </div>
             </div>
@@ -185,34 +169,22 @@ export class TApp extends HTMLElement {
                     <p>Indonesia adalah negara besar dengan pertumbuhan industri startup yang sangat cepat. Tapi pertumbuhan ini tidak dibarengi dengan pertumbuhan suplai talenta. Bahkan lulusan universitas belum memenuhi kebutuhan standar industri. Karena itu komunitas di sini memainkan peran yang sangat penting untuk mengembangkan talenta kita dan menyiapkan mereka untuk siap dengan standar industri.
                     </p>
                     <p>Bootcamp ini diperuntukkan untuk kalian yang aktif di komunitas pengembang web Indonesia sehingga kita bisa saling mengenal satu sama lain dan bersama-sama berdiskusi untuk membuat para pengembang web di Indonesia bisa membuat web yang lebih baik.</p>
+                    <p>Bootcamp ini adalah yang kedua kalinya setelah tahun lalu kami mengadakan event serupa di Yogyakarta. Dan fokus utama kami untuk tahun ini adalah bagaimana komunitas web bisa bersama-sama meningkatkan kemampuan dan produktifitas anggota komunitasnya.</p>
+                    </article>
+                </div>
+                <div id="last-event" class="block-content">
+                    <h3>WebUnconf 2018</h3>
+                    <article>
+                    <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/tfSXwOkpGu0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </article>
                 </div>
                 <div id="venue-content" class="block-content">
                     <h2>Lokasi</h2>
                     <div id="venue">
-                        <t-img src="img/ethes-facade.jpg"></t-img>
                         <article>
-                            <h4>Ethes Coworking &amp; Coliving Space</h4>
-                            <p>Jl. Umbul Permai No.88, Lojajar, <br/>Kabupaten Sleman, Daerah Istimewa Yogyakarta</p>
-                            <p>Ethes coworking &amp; coliving space adalah coliving space pertama di Yogyakarta yang diperuntukkan untuk freelancers dan entrepreneurs untuk tinggal dan bekerja.</p>
-                            <p><a href="https://goo.gl/maps/2GWpi5SbTrE2">Lihat di Google Maps</a></p>
+                            <h4>Batu, Malang</h4>
+                            <p>Venue masih dalam konfirmasi.</p>
                         </article>
-                    </div>
-                </div>
-                <div id="community-content" class="block-content">
-                    <t-communities></t-communities>
-                </div>
-                <div class="block-content" id="organizer-list">
-                    <t-organizers></t-organizers>
-                </div>
-                <div class="block-content" id="participants-list">
-                    <t-participants></t-participants>
-                </div>
-                <div class="block-content" id="sponsor">
-                    <h2>Sponsor</h2>
-                    <div id="sponsor-list">
-                        <a href="//tiket.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Link ke Tiket.com" src="img/logo/tiket.png" size="contain" position="center"></t-img></a>
-                        <a href="//sirclo.com" target="_blank" rel="noopener"><t-img class="sponsor" alt="Line ke Sirclo.com" src="img/logo/sirclo.png" size="contain" position="center"></t-img></a>
                     </div>
                 </div>
                 <div id="footer" class="block-content">
