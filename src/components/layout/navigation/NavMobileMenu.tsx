@@ -22,7 +22,7 @@ const NavMobileMenu: React.FC<NavMobileMenuProps> = ({ menuItems, _menuProps, ..
           <PopoverArrow />
           <Box as="ul" listStyleType="none">
             {menuItems.map(item => (
-              <NavMobileMenuItem item={item} />
+              <NavMobileMenuItem key={item.href} item={item} />
             ))}
           </Box>
         </PopoverContent>
