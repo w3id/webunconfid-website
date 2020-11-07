@@ -15,8 +15,9 @@ const AboutPage: NextPage = () => {
           <Box as="section">
             <PageHeader
               title="Apa Itu WWWID?"
-              image="https://via.placeholder.com/366x107"
+              image="/static/logo.svg"
               _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }}
+              _imgProps={{ maxWidth: 366, alt: 'WWWID' }}
             />
             <PageBody textAlign="center" _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }}>
               <Stack spacing={4}>
