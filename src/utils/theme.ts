@@ -42,6 +42,7 @@ const theme = extendTheme({
     },
     Link: {
       baseStyle: {
+        color: 'brand.500',
         _focus: {
           boxShadow: `0 0 0 3px ${transparentize(0.5, '#d7182a')}`
         }

@@ -19,6 +19,7 @@ const NavMobileMenuItem: React.FC<NavMobileMenuItemProps> = ({ item, _linkProps,
           display="block"
           px="0.8rem"
           py="0.4rem"
+          color="inherit"
           fontWeight={router.asPath === item.href ? 700 : 400}
           _hover={{ backgroundColor: 'gray.100' }}
           _focus={{ backgroundColor: 'gray.100' }}

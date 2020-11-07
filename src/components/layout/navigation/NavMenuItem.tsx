@@ -15,7 +15,7 @@ const NavMenuItem: React.FC<NavMenuItemProps> = ({ item, _linkProps, ...rest }) 
   return (
     <ListItem mx={3} {...rest}>
       <Link href={item.href} passHref>
-        <ChakraLink fontWeight={router.asPath === item.href ? 700 : 400} {..._linkProps}>
+        <ChakraLink color="inherit" fontWeight={router.asPath === item.href ? 700 : 400} {..._linkProps}>
           {item.name}
         </ChakraLink>
       </Link>
