@@ -20,6 +20,7 @@
   },
   "dependencies": {
     "@chakra-ui/core": "^1.0.0-rc.8",
+    "@chakra-ui/icons": "^1.0.0-rc.8",
     "date-fns": "^2.16.1",
     "emotion": "^10.0.27",
     "emotion-server": "^10.0.27",

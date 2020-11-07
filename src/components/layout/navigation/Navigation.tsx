@@ -5,6 +5,7 @@ import Container from '../Container'
 
 import menuItems from '~/_data/menu.json'
 import NavMenu from './NavMenu'
+import NavMobileMenu from './NavMobileMenu'
 
 const Navigation: React.FC = () => {
   return (
@@ -19,6 +20,7 @@ const Navigation: React.FC = () => {
         </Box>
         <Box as="nav">
           <NavMenu menuItems={menuItems} />
+          <NavMobileMenu menuItems={menuItems} />
         </Box>
       </Container>
     </Flex>

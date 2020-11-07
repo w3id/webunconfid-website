@@ -58,7 +58,7 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
               maxWidth={[400, null, null, null, 600]}
               borderRadius={[0, null, null, 36]}
             />
-            <Box py={12} pl={16} pr={0} maxWidth={800}>
+            <Box py={[0, null, null, 12]} pl={[0, null, null, 16]} pr={0} maxWidth={800}>
               <Heading size="xl">Unconference Untuk Aktivis Komunitas Pengembang Web Indonesia</Heading>
               <Box as="hr" my={8} borderTop="4px solid" borderTopColor="black" width="56px" />
               <Stack spacing={4}>

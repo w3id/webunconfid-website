@@ -31,6 +31,15 @@ const theme = extendTheme({
         }
       }
     },
+    Popover: {
+      baseStyle: () => ({
+        content: {
+          _focus: {
+            boxShadow: `0 0 0 3px ${transparentize(0.5, '#d7182a')}`
+          }
+        }
+      })
+    },
     Link: {
       baseStyle: {
         _focus: {

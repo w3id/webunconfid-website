@@ -1300,6 +1300,14 @@
   dependencies:
     "@chakra-ui/utils" "1.0.0-rc.8"
 
+"@chakra-ui/icons@^1.0.0-rc.8":
+  version "1.0.0-rc.8"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-1.0.0-rc.8.tgz#d616888fc5c5a56c35d2bd3b309a0a729cb09a5f"
+  integrity sha512-bw4EnzsrfXiTl0uAsfTtL9mf1Xkvff3N+gSIatZLAYr6h1ldRwKFLmZg3ymwQxwr4JvAnoEES3HYaze8Aom9Zg==
+  dependencies:
+    "@chakra-ui/icon" "1.0.0-rc.8"
+    "@types/react" "16.9.44"
+
 "@chakra-ui/image@1.0.0-rc.8":
   version "1.0.0-rc.8"
   resolved "https://registry.yarnpkg.com/@chakra-ui/image/-/image-1.0.0-rc.8.tgz#fb9f25f93617b82d1e91ed48e5f24e2e1e342085"
@@ -1876,6 +1884,14 @@
   version "16.9.55"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.55.tgz#47078587f5bfe028a23b6b46c7b94ac0d436acff"
   integrity sha512-6KLe6lkILeRwyyy7yG9rULKJ0sXplUsl98MGoCfpteXf9sPWFWWMknDcsvubcpaTdBuxtsLF6HDUwdApZL/xIg==
+  dependencies:
+    "@types/prop-types" "*"
+    csstype "^3.0.2"
+
+"@types/react@16.9.44":
+  version "16.9.44"
+  resolved "https://registry.yarnpkg.com/@types/react/-/react-16.9.44.tgz#da84b179c031aef67dc92c33bd3401f1da2fa3bc"
+  integrity sha512-BtLoJrXdW8DVZauKP+bY4Kmiq7ubcJq+H/aCpRfvPF7RAT3RwR73Sg8szdc2YasbAlWBDrQ6Q+AFM0KwtQY+WQ==
   dependencies:
     "@types/prop-types" "*"
     csstype "^3.0.2"
