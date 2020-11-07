@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { LayoutRoot, Navigation, Content } from '~/components/layout'
 import { HomepageHero, HomepageSection } from '~/modules/home'
 import { getSpeakersList, SpeakerList } from '~/modules/speakers'
+import { ScheduleList } from '~/modules/schedule'
 
 export const getStaticProps = async () => {
   const talks = await getSpeakersList()
@@ -76,22 +77,38 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
               </Link>
             </Box>
           </Flex>
-          <HomepageSection>
-            <Box>
-              <Heading size="xl" textAlign="center">
-                Pembicara
-              </Heading>
-              <Box
-                as="hr"
-                my={8}
-                borderTop="4px solid"
-                borderTopColor="black"
-                width="56px"
-                style={{ marginLeft: 'auto', marginRight: 'auto' }}
-              />
-              <SpeakerList talks={talks} />
-            </Box>
-          </HomepageSection>
+        </HomepageSection>
+        <HomepageSection>
+          <Box>
+            <Heading size="xl" textAlign="center">
+              Jadwal
+            </Heading>
+            <Box
+              as="hr"
+              my={8}
+              borderTop="4px solid"
+              borderTopColor="black"
+              width="56px"
+              style={{ marginLeft: 'auto', marginRight: 'auto' }}
+            />
+            <ScheduleList talks={talks} />
+          </Box>
+        </HomepageSection>
+        <HomepageSection>
+          <Box>
+            <Heading size="xl" textAlign="center">
+              Pembicara
+            </Heading>
+            <Box
+              as="hr"
+              my={8}
+              borderTop="4px solid"
+              borderTopColor="black"
+              width="56px"
+              style={{ marginLeft: 'auto', marginRight: 'auto' }}
+            />
+            <SpeakerList talks={talks} />
+          </Box>
         </HomepageSection>
       </Content>
     </LayoutRoot>

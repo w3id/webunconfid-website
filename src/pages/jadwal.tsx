@@ -2,7 +2,8 @@ import * as React from 'react'
 import { InferGetStaticPropsType, NextPage } from 'next'
 
 import { LayoutRoot, Navigation, Content, Page, PageHeader, PageBody } from '~/components/layout'
-import { getSpeakersList, SpeakerList } from '~/modules/speakers'
+import { getSpeakersList } from '~/modules/speakers'
+import { ScheduleList } from '~/modules/schedule'
 
 const MAX_CONTAINER_WIDTH = 952
 
@@ -22,9 +23,9 @@ const SchedulePage: NextPage<SchedulePageProps> = ({ talks }) => {
       <Navigation />
       <Content>
         <Page>
-          <PageHeader title="Pembicara" _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }} />
+          <PageHeader title="Jadwal" _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }} />
           <PageBody>
-            <SpeakerList talks={talks} />
+            <ScheduleList talks={talks} />
           </PageBody>
         </Page>
       </Content>
