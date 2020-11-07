@@ -39,7 +39,8 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
             <Img
               display={['none', null, null, 'block']}
               alt="Header"
-              src="/static/webunconfID-2k20-header.png"
+              src="/static/webunconfID-2k20-header.jpg"
+              loading="lazy"
               width="100%"
               maxWidth={[460, null, null, null, 600]}
               borderRadius={[0, null, null, 48]}
@@ -51,7 +52,8 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
             <Img
               display={['none', null, null, 'block']}
               alt="Header"
-              src="/static/webunconfID-2k20-header.png"
+              src="/static/webunconfID-2k20-1.jpg"
+              loading="lazy"
               width="100%"
               maxWidth={[400, null, null, null, 600]}
               borderRadius={[0, null, null, 36]}

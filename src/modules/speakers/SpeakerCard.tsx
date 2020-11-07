@@ -9,7 +9,7 @@ interface SpeakerCardProps {
 const SpeakerCard: React.FC<SpeakerCardProps> = ({ talk }) => {
   return (
     <Box textAlign="center">
-      <Img mx="auto" mb={6} width={140} height={140} borderRadius={140} src={talk.photoUrl} alt={talk.speaker} />
+      <Img mx="auto" loading="lazy" mb={6} width={140} height={140} borderRadius={140} src={talk.photoUrl} alt={talk.speaker} />
       <Stack>
         <Heading as="h3" size="md" color="brand.500">
           {talk.speaker}
