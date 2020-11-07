@@ -1,26 +1,51 @@
 {
-  "name": "webunconfid",
+  "name": "@w3id/webunconfid-website",
   "version": "1.0.0",
-  "description": "website for webunconfid event",
+  "description": "Website for WebunconfID",
+  "main": "N/A",
+  "repository": "https://github.com/w3id/webunconfid-website.git",
+  "license": "MIT",
   "private": true,
   "scripts": {
-    "dev": "cross-env NODE_ENV=development npx rollup --config --watch",
-    "production": "cross-env NODE_ENV=production npx rollup --config",
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start",
+    "production": "yarn build && yarn export",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "lint": "eslint \"**/*.{ts,tsx}\" \"*.config.js\"",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run production"
+    "type-check": "tsc --noEmit",
+    "validate": "yarn type-check && yarn lint"
   },
-  "author": "Yohan Totting <tyohan@gmail.com>",
-  "license": "ISC",
   "dependencies": {
-    "lit-html": "^0.11.4",
-    "milligram": "^1.4.1"
+    "@chakra-ui/core": "^1.0.0-rc.8",
+    "emotion": "^10.0.27",
+    "emotion-server": "^10.0.27",
+    "framer-motion": "^2.9.4",
+    "gray-matter": "^4.0.2",
+    "htmr": "^0.9.2",
+    "markdown-it": "^12.0.2",
+    "markdown-it-implicit-figures": "^0.10.0",
+    "modern-normalize": "^1.0.0",
+    "next": "^10.0.1",
+    "polished": "^4.0.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "typeface-inter": "3.15.0"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "^10.0.0",
+    "@types/markdown-it": "^10.0.2",
+    "@types/node": "^14.14.6",
+    "@types/react": "^16.9.56",
+    "@types/react-dom": "^16.9.9",
+    "@types/styled-jsx": "^2.2.8",
     "cross-env": "^7.0.2",
-    "rollup": "^2.32.1",
-    "rollup-plugin-copy": "^3.3.0",
-    "rollup-plugin-serve": "^1.0.4",
-    "rollup-plugin-terser": "^7.0.2"
+    "eslint": "6.8.0",
+    "eslint-config-blvd": "^1.0.2",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "typescript": "^4.0.5"
   }
 }

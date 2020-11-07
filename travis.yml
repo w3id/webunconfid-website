@@ -1,0 +1,21 @@
+language: node_js
+branches:
+  only:
+    - master
+node_js:
+  - '12'
+cache:
+  yarn: true
+  directories:
+    - node_modules
+
+script:
+  - echo 'Deploying to Firebase...'
+before_install:
+  - npm install -g firebase-tools yarn
+install:
+  - yarn install
+script:
+  - yarn production
+after_success:
+  - firebase deploy --token $FIREBASE_TOKEN
