@@ -1,0 +1,17 @@
+on:
+  push:
+    branches: [master]
+
+name: Deploy
+
+jobs:
+  deploy:
+    name: Deploy to Firebase
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: yarn install --frozen-lockfile
+      - run: yarn production
+        env:
+          CI: true
+      - run: firebase deploy --token $FIREBASE_TOKEN

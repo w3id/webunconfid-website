@@ -1,3 +1,13 @@
+# =========================
+# Node.js-Specific Ignores
+# =========================
+
+# Build directory
+.next/
+
+# Static export path
+out/
+
 # Logs
 logs
 *.log
@@ -29,14 +39,14 @@ bower_components
 # node-waf configuration
 .lock-wscript
 
-# Compiled binary addons (https://nodejs.org/api/addons.html)
+# Compiled binary addons (http://nodejs.org/api/addons.html)
 build/Release
 
 # Dependency directories
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
 typings/
 
 # Optional npm cache directory
@@ -57,15 +67,49 @@ typings/
 # dotenv environment variables file
 .env
 
-# next.js build output
-.next
+# =========================
+# Operating System Files
+# =========================
 
-firebase.json
-.vscode
-.firebase
-.firebaserc
-.eslintrc.js
+# OSX
+# =========================
+
 .DS_Store
-.cache
-dist
-package-lock.json
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Windows
+# =========================
+
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
