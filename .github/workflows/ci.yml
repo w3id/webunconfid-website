@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: yarn install --immutable
+      - run: yarn install --frozen-lockfile
       - uses: actions/cache@v1
         id: cache-build
         with:
