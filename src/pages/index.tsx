@@ -32,7 +32,16 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
               <Text fontSize="lg">Web Community Leaders Unconference</Text>
               <Text fontSize="lg">Sabtu, 29 November 2020</Text>
               <Text fontSize="lg">13.00 - 17.00 WIB</Text>
-              <Button mt={9} colorScheme="brand" size="lg" width={200}>
+              <Button
+                as="a"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSfPnjyp7ckO3TExXM_xPD5ZUAw7NqONs3lMJT_mxbAeWsjjDg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+                mt={9}
+                colorScheme="brand"
+                size="lg"
+                width={200}
+              >
                 Daftar
               </Button>
             </Box>
