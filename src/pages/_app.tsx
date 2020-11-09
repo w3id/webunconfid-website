@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { DefaultSeo } from 'next-seo'
 import { ChakraProvider } from '@chakra-ui/core'
 import { CacheProvider } from '@emotion/core'
 import { cache } from 'emotion'
@@ -6,10 +7,14 @@ import { AppProps } from 'next/app'
 import Head from 'next/head'
 
 import theme from '~/utils/theme'
+import siteMetadata from '~/_data/siteMetadata.json'
 
 import 'typeface-inter'
 
-export default function MyApp({ Component, pageProps }: AppProps) {
+export default function MyApp({ Component, pageProps, router }: AppProps) {
+  const { title, description, siteUrl } = siteMetadata
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || siteUrl
+
   return (
     <CacheProvider value={cache}>
       <ChakraProvider theme={theme}>
@@ -22,6 +27,30 @@ export default function MyApp({ Component, pageProps }: AppProps) {
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="theme-color" content="#ffffff" />
         </Head>
+        <DefaultSeo
+          title={title}
+          titleTemplate={`%s · ${title}`}
+          description={description}
+          canonical={baseUrl + router.asPath || ''}
+          openGraph={{
+            title,
+            description,
+            url: baseUrl,
+            type: 'website',
+            site_name: title,
+            images: [
+              {
+                url: `${siteMetadata.siteUrl}/social.png`,
+                width: 1200,
+                height: 620,
+                alt: siteMetadata.title
+              }
+            ]
+          }}
+          twitter={{
+            cardType: 'summary_large_image'
+          }}
+        />
         <Component {...pageProps} />
       </ChakraProvider>
     </CacheProvider>
