@@ -1,16 +1,23 @@
 [
   {
-    "date": "2020-12-11T10:00:00+07:00",
-    "title": "Tiga Fase Startup Dan Prioritas Pemilihan Tech Stack Yang Sesuai",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate est eum consectetur quisquam impedit eius at deserunt dolor. Quae debitis mollitia obcaecati accusantium atque tempora perspiciatis at dolorum maiores aspernatur.",
-    "speaker": "Aria Rajasa",
-    "photoUrl": "https://via.placeholder.com/400x400"
+    "date": "2020-12-11T13:00:00+07:00",
+    "title": "TBA",
+    "description": "TBA",
+    "speaker": "TBA",
+    "photoUrl": "/static/placeholder.png"
   },
   {
-    "date": "2020-12-11T11:00:00+07:00",
-    "title": "Prinsip Dasar Dalam Membuat Web Visualisasi Data Interaktif",
-    "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate est eum consectetur quisquam impedit eius at deserunt dolor. Quae debitis mollitia obcaecati accusantium atque tempora perspiciatis at dolorum maiores aspernatur.",
-    "speaker": "Doni Rubiagatra",
-    "photoUrl": "https://via.placeholder.com/400x400"
+    "date": "2020-12-11T13:00:00+07:00",
+    "title": "TBA",
+    "description": "TBA",
+    "speaker": "TBA",
+    "photoUrl": "/static/placeholder.png"
+  },
+  {
+    "date": "2020-12-11T13:00:00+07:00",
+    "title": "TBA",
+    "description": "TBA",
+    "speaker": "TBA",
+    "photoUrl": "/static/placeholder.png"
   }
 ]
