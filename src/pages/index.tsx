@@ -7,6 +7,7 @@ import { LayoutRoot, Navigation, Content } from '~/components/layout'
 import { HomepageHero, HomepageSection } from '~/modules/home'
 import { getSpeakersList, SpeakerList } from '~/modules/speakers'
 import { ScheduleList } from '~/modules/schedule'
+import siteMetadata from '~/_data/siteMetadata.json'
 
 export const getStaticProps = async () => {
   const talks = await getSpeakersList()
@@ -19,8 +20,10 @@ export const getStaticProps = async () => {
 type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
 const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
+  const { title, description } = siteMetadata
+
   return (
-    <LayoutRoot>
+    <LayoutRoot title="Home" titleTemplate={`${title} · ${description}`}>
       <Navigation />
       <Content>
         <HomepageHero>

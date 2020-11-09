@@ -1,17 +1,15 @@
 import { Flex } from '@chakra-ui/core'
 import * as React from 'react'
-import Head from 'next/head'
+import { NextSeo, NextSeoProps } from 'next-seo'
 import Footer from './Footer'
 
-interface PageProps {
+interface PageProps extends NextSeoProps {
   title?: string
 }
 
-const LayoutRoot: React.FC<PageProps> = ({ children, title }) => (
+const LayoutRoot: React.FC<PageProps> = ({ children, title, ...rest }) => (
   <Flex flexDirection="column" minHeight="100vh" overflowX="hidden">
-    <Head>
-      <title>{title || 'WebUnconf 2020'}</title>
-    </Head>
+    <NextSeo title={title || ''} {...rest} />
     {children}
     <Footer />
   </Flex>
