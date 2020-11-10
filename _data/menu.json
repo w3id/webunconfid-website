@@ -1,7 +1,5 @@
 [
   { "name": "Beranda", "href": "/" },
   { "name": "Tentang", "href": "/tentang" },
-  { "name": "Jadwal", "href": "/jadwal" },
-  { "name": "Pembicara", "href": "/pembicara" },
   { "name": "Kode Etik", "href": "/kode-etik" }
 ]

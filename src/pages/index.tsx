@@ -5,8 +5,7 @@ import Link from 'next/link'
 
 import { LayoutRoot, Navigation, Content } from '~/components/layout'
 import { HomepageHero, HomepageSection } from '~/modules/home'
-import { getSpeakersList, SpeakerList } from '~/modules/speakers'
-import { ScheduleList } from '~/modules/schedule'
+import { getSpeakersList } from '~/modules/speakers'
 import siteMetadata from '~/_data/siteMetadata.json'
 
 export const getStaticProps = async () => {
@@ -19,7 +18,7 @@ export const getStaticProps = async () => {
 
 type IndexPageProps = InferGetStaticPropsType<typeof getStaticProps>
 
-const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
+const IndexPage: NextPage<IndexPageProps> = () => {
   const { title, description } = siteMetadata
 
   return (
@@ -93,36 +92,70 @@ const IndexPage: NextPage<IndexPageProps> = ({ talks }) => {
           </Flex>
         </HomepageSection>
         <HomepageSection>
-          <Box>
-            <Heading size="xl" textAlign="center">
-              Jadwal
-            </Heading>
-            <Box
-              as="hr"
-              my={8}
-              borderTop="4px solid"
-              borderTopColor="black"
-              width="56px"
-              style={{ marginLeft: 'auto', marginRight: 'auto' }}
-            />
-            <ScheduleList talks={talks} />
-          </Box>
+          <Flex flexDirection="row" alignItems="center" justifyContent="center">
+            <Box maxWidth={800} textAlign="center">
+              <Heading size="xl">Trend dan Perkembangan Teknologi Web</Heading>
+              <Box as="hr" my={8} mx="auto" borderTop="4px solid" borderTopColor="black" width="56px" />
+              <Stack spacing={4}>
+                <Text fontSize="lg">
+                  Teknologi web tahun ini makin mendekati apa yang bisa kita lakukan di aplikasi native. Bahkan beberapa aplikasi
+                  professional mulai digantikan oleh aplikasi web. Sebut saja Figma yang menjadi aplikasi wajib para designer user
+                  interface. Dan bisa jadi ke depannya akan muncul aplikasi serupa berbasis web yang akan menggantikan peran aplikasi
+                  native. Sehingga tidak perlu lagi sebuah aplikasi dibatasi oleh OS ataupun keterbatasan storage karena keharusan instalasi
+                  sebelum digunakan.
+                </Text>
+                <Text fontSize="lg">
+                  Bagaimana tren pengembangan web, dan kira-kira aplikasi seperti apa yang ke depannya akan bermunculan menggunakan
+                  teknologi web? Daftarkan topik yang membahas hal-hal terkait teknologi web dan implementasinya. Dan jelaskan mengapa topik
+                  tersebut menarik untuk dibahas?
+                </Text>
+              </Stack>
+            </Box>
+          </Flex>
         </HomepageSection>
         <HomepageSection>
-          <Box>
-            <Heading size="xl" textAlign="center">
-              Pembicara
-            </Heading>
-            <Box
-              as="hr"
-              my={8}
-              borderTop="4px solid"
-              borderTopColor="black"
-              width="56px"
-              style={{ marginLeft: 'auto', marginRight: 'auto' }}
-            />
-            <SpeakerList talks={talks} />
-          </Box>
+          <Flex flexDirection="row" alignItems="center" justifyContent="center">
+            <Box maxWidth={800} textAlign="center">
+              <Heading size="xl">Memulai dan Mengelola Komunitas Web</Heading>
+              <Box as="hr" my={8} mx="auto" borderTop="4px solid" borderTopColor="black" width="56px" />
+              <Stack spacing={4}>
+                <Text fontSize="lg">
+                  Komunitas web berkembang cukup pesat di Indonesia namun di era pandemic tahun ini memaksa beberapa komunitas beradaptasi
+                  untuk tetap bisa berbagi pengetahuan dan berinteraksi dengan sesama pengembang web. Namun mengelola komunitas tidaklah
+                  mudah, terutama dari sisi komitmen dan sumber daya yang terbatas.
+                </Text>
+                <Text fontSize="lg">
+                  Bagaimana komunitas bisa bertahan dan bahkan terus mengembangkan komunitasnya? Apa saja tantangan dalam memulai dan
+                  mengelola komunitas web terutama di daerah tanpa dukungan infrastruktur yang terbatas? Daftarkan topik yang perlu dibahas,
+                  dan jelaskan mengapa kamu ingin mengetahui lebih jauh terkait topik tersebut.
+                </Text>
+              </Stack>
+            </Box>
+          </Flex>
+        </HomepageSection>
+        <HomepageSection>
+          <Flex flexDirection="row" alignItems="center" justifyContent="center">
+            <Box maxWidth={800} textAlign="center">
+              <Heading size="xl">Belajar dan Berkembang Lewat Komunitas Untuk Programmer Pemula</Heading>
+              <Box as="hr" my={8} mx="auto" borderTop="4px solid" borderTopColor="black" width="56px" />
+              <Stack spacing={4}>
+                <Text fontSize="lg">
+                  Sebagian besar programmer jaman sekarang sudah lebih mudah untuk memulai belajar pengembangan web melalui coding bootcamp
+                  atau online learning yang jumlahnya sudah cukup banyak. Namun kemudahan mengakses konten pembelajaran ini justru membuat
+                  pengembang kehilangan kemampuan dasarnya, yaitu belajar mandiri, menganalisa masalah, dan menemukan solusinya.
+                </Text>
+                <Text fontSize="lg">
+                  Para pengembang banyak yang lupa bahwa kemampuan utama membaca dokumentasi, dan merancang solusi adalah fundamental dasar
+                  yang kadang tidak diajarkan di coding bootcamp atau kursus online. Untuk itulah komunitas bisa menjadi tempat belajar
+                  lanjutan untuk bisa mendapatkan akses ke pengalaman dan pengetahuan para pengembang senior.
+                </Text>
+                <Text fontSize="lg">
+                  Apa yang kamu ingin tahu terkait menjadikan komunitas sebagai tempat berkembang bersama? Daftarkan topi dan jelaskan
+                  mengapa hal tersebut berguna untuk para pengembang pemula.
+                </Text>
+              </Stack>
+            </Box>
+          </Flex>
         </HomepageSection>
       </Content>
     </LayoutRoot>
