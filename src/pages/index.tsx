@@ -36,7 +36,7 @@ const IndexPage: NextPage<IndexPageProps> = () => {
               <Text fontSize="lg">13.00 - 17.00 WIB</Text>
               <Button
                 as="a"
-                href="https://docs.google.com/forms/d/e/1FAIpQLSfPnjyp7ckO3TExXM_xPD5ZUAw7NqONs3lMJT_mxbAeWsjjDg/viewform"
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeVi2TSc1LiESrNhcQHb8uMeQoZiRGFOqtYANsNsb4ZWaqjdQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 mt={9}
