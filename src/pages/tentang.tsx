@@ -4,7 +4,7 @@ import { Box, Stack, Text } from '@chakra-ui/core'
 
 import { LayoutRoot, Navigation, Content, Page, PageHeader, PageBody } from '~/components/layout'
 
-const MAX_CONTAINER_WIDTH = '60rem'
+const MAX_CONTAINER_WIDTH = '60ch'
 
 const AboutPage: NextPage = () => {
   return (
@@ -37,10 +37,7 @@ const AboutPage: NextPage = () => {
             </PageBody>
           </Box>
           <Box as="section">
-            <PageHeader
-              title="Unconference Untuk Aktivis Komunitas Pengembang Web Indonesia"
-              _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }}
-            />
+            <PageHeader title="Unconference Untuk Komunitas Pengembang Web Indonesia" _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }} />
             <PageBody textAlign="center" _containerProps={{ maxWidth: MAX_CONTAINER_WIDTH }}>
               <Stack spacing={4}>
                 <Text fontSize="lg">
