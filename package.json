@@ -30,7 +30,7 @@
     "markdown-it": "^12.0.2",
     "markdown-it-implicit-figures": "^0.10.0",
     "modern-normalize": "^1.0.0",
-    "next": "^10.0.1",
+    "next": "^11.1.3",
     "next-seo": "^4.15.1",
     "polished": "^4.0.3",
     "react": "^17.0.1",
